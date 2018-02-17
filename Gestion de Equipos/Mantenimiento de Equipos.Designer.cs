@@ -88,7 +88,7 @@
             // tbdias
             // 
             this.tbdias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbdias.Location = new System.Drawing.Point(157, 186);
+            this.tbdias.Location = new System.Drawing.Point(156, 186);
             this.tbdias.Name = "tbdias";
             this.tbdias.Size = new System.Drawing.Size(112, 23);
             this.tbdias.TabIndex = 64;
@@ -97,7 +97,7 @@
             // 
             this.lblparticipante.AutoSize = true;
             this.lblparticipante.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.lblparticipante.Location = new System.Drawing.Point(18, 183);
+            this.lblparticipante.Location = new System.Drawing.Point(17, 185);
             this.lblparticipante.Name = "lblparticipante";
             this.lblparticipante.Size = new System.Drawing.Size(133, 24);
             this.lblparticipante.TabIndex = 71;
@@ -106,7 +106,7 @@
             // tbpprecio
             // 
             this.tbpprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbpprecio.Location = new System.Drawing.Point(156, 155);
+            this.tbpprecio.Location = new System.Drawing.Point(155, 126);
             this.tbpprecio.Name = "tbpprecio";
             this.tbpprecio.Size = new System.Drawing.Size(112, 23);
             this.tbpprecio.TabIndex = 63;
@@ -115,7 +115,7 @@
             // 
             this.lblestado.AutoSize = true;
             this.lblestado.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.lblestado.Location = new System.Drawing.Point(71, 155);
+            this.lblestado.Location = new System.Drawing.Point(72, 126);
             this.lblestado.Name = "lblestado";
             this.lblestado.Size = new System.Drawing.Size(77, 24);
             this.lblestado.TabIndex = 70;
@@ -133,7 +133,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(59, 95);
+            this.label2.Location = new System.Drawing.Point(59, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 24);
             this.label2.TabIndex = 69;
@@ -162,16 +162,16 @@
             // 
             this.lblmarca.AutoSize = true;
             this.lblmarca.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.lblmarca.Location = new System.Drawing.Point(76, 124);
+            this.lblmarca.Location = new System.Drawing.Point(95, 154);
             this.lblmarca.Name = "lblmarca";
-            this.lblmarca.Size = new System.Drawing.Size(72, 24);
+            this.lblmarca.Size = new System.Drawing.Size(55, 24);
             this.lblmarca.TabIndex = 70;
-            this.lblmarca.Text = "Marca";
+            this.lblmarca.Text = "Aula";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox1.Location = new System.Drawing.Point(155, 124);
+            this.textBox1.Location = new System.Drawing.Point(156, 157);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(194, 23);
             this.textBox1.TabIndex = 63;

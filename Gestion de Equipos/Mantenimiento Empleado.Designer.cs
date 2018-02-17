@@ -97,11 +97,11 @@
             // 
             this.lblparticipante.AutoSize = true;
             this.lblparticipante.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.lblparticipante.Location = new System.Drawing.Point(16, 181);
+            this.lblparticipante.Location = new System.Drawing.Point(42, 181);
             this.lblparticipante.Name = "lblparticipante";
-            this.lblparticipante.Size = new System.Drawing.Size(133, 24);
+            this.lblparticipante.Size = new System.Drawing.Size(105, 24);
             this.lblparticipante.TabIndex = 85;
-            this.lblparticipante.Text = "Participante";
+            this.lblparticipante.Text = "Dirección";
             // 
             // textBox1
             // 
@@ -115,11 +115,11 @@
             // 
             this.lblmarca.AutoSize = true;
             this.lblmarca.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.lblmarca.Location = new System.Drawing.Point(74, 122);
+            this.lblmarca.Location = new System.Drawing.Point(68, 122);
             this.lblmarca.Name = "lblmarca";
-            this.lblmarca.Size = new System.Drawing.Size(72, 24);
+            this.lblmarca.Size = new System.Drawing.Size(79, 24);
             this.lblmarca.TabIndex = 83;
-            this.lblmarca.Text = "Marca";
+            this.lblmarca.Text = "Cédula";
             // 
             // tbpprecio
             // 
@@ -133,11 +133,11 @@
             // 
             this.lblestado.AutoSize = true;
             this.lblestado.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.lblestado.Location = new System.Drawing.Point(69, 153);
+            this.lblestado.Location = new System.Drawing.Point(50, 153);
             this.lblestado.Name = "lblestado";
-            this.lblestado.Size = new System.Drawing.Size(77, 24);
+            this.lblestado.Size = new System.Drawing.Size(97, 24);
             this.lblestado.TabIndex = 84;
-            this.lblestado.Text = "Estado";
+            this.lblestado.Text = "Teléfono";
             // 
             // tbpnombre
             // 
@@ -151,7 +151,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(57, 93);
+            this.label2.Location = new System.Drawing.Point(57, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 24);
             this.label2.TabIndex = 82;

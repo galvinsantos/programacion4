@@ -45,11 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agregar Equipo.cs">
+    <Compile Include="Mantenimiento de Equipos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agregar Equipo.Designer.cs">
-      <DependentUpon>Agregar Equipo.cs</DependentUpon>
+    <Compile Include="Mantenimiento de Equipos.Designer.cs">
+      <DependentUpon>Mantenimiento de Equipos.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultar.cs">
       <SubType>Form</SubType>
@@ -89,8 +89,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Agregar Equipo.resx">
-      <DependentUpon>Agregar Equipo.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenimiento de Equipos.resx">
+      <DependentUpon>Mantenimiento de Equipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultar.resx">
       <DependentUpon>Consultar.cs</DependentUpon>
