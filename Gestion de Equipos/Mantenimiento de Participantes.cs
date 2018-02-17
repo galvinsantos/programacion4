@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gestion_de_Equipos
 {
-    public partial class Mantenimiento_de_Equipos : Form
+    public partial class Mantenimiento_de_Participantes : Form
     {
-        public Mantenimiento_de_Equipos()
+        public Mantenimiento_de_Participantes()
         {
             InitializeComponent();
         }
