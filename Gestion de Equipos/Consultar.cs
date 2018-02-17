@@ -15,6 +15,7 @@ namespace Gestion_de_Equipos
         public Consultar()
         {
             InitializeComponent();
+
         }
 
         private void Consultar_Load(object sender, EventArgs e)
