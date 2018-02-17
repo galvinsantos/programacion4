@@ -21,5 +21,10 @@ namespace Gestion_de_Equipos
         {
             this.Close();
         }
+
+        private void textBox2_KeyUp(object sender, KeyEventArgs e)
+        {
+            txtpassword.Text += "☺";
+        }
     }
 }

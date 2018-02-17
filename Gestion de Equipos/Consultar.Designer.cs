@@ -143,7 +143,7 @@
             "Participante",
             "Equipos",
             "Empleados"});
-            this.cbtipobusqueda.Location = new System.Drawing.Point(129, 17);
+            this.cbtipobusqueda.Location = new System.Drawing.Point(129, 18);
             this.cbtipobusqueda.Name = "cbtipobusqueda";
             this.cbtipobusqueda.Size = new System.Drawing.Size(110, 21);
             this.cbtipobusqueda.TabIndex = 83;
