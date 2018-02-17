@@ -162,11 +162,11 @@
             // 
             this.lblmarca.AutoSize = true;
             this.lblmarca.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.lblmarca.Location = new System.Drawing.Point(95, 154);
+            this.lblmarca.Location = new System.Drawing.Point(41, 154);
             this.lblmarca.Name = "lblmarca";
-            this.lblmarca.Size = new System.Drawing.Size(55, 24);
+            this.lblmarca.Size = new System.Drawing.Size(109, 24);
             this.lblmarca.TabIndex = 70;
-            this.lblmarca.Text = "Aula";
+            this.lblmarca.Text = "Ubicación";
             // 
             // textBox1
             // 
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 327);
+            this.ClientSize = new System.Drawing.Size(405, 319);
             this.Controls.Add(this.btpnew);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btpdelete);
@@ -196,6 +196,7 @@
             this.Controls.Add(this.tbpcodigo);
             this.Controls.Add(this.label1);
             this.Name = "Mantenimiento_de_Equipos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento de Equipos";
             this.ResumeLayout(false);
             this.PerformLayout();

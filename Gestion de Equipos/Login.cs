@@ -16,5 +16,10 @@ namespace Gestion_de_Equipos
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

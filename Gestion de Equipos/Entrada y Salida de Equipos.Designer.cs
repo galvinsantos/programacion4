@@ -32,11 +32,11 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.dgvequipos = new System.Windows.Forms.DataGridView();
-            this.lbltitulo = new System.Windows.Forms.Label();
             this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sueldobruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbltitulo = new System.Windows.Forms.Label();
             this.btnmostrartodo = new System.Windows.Forms.Button();
             this.btnentrada = new System.Windows.Forms.Button();
             this.btnsalida = new System.Windows.Forms.Button();
@@ -97,16 +97,6 @@
             this.dgvequipos.Size = new System.Drawing.Size(683, 319);
             this.dgvequipos.TabIndex = 68;
             // 
-            // lbltitulo
-            // 
-            this.lbltitulo.AutoSize = true;
-            this.lbltitulo.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.Location = new System.Drawing.Point(9, 12);
-            this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(100, 32);
-            this.lbltitulo.TabIndex = 72;
-            this.lbltitulo.Text = "Equipos";
-            // 
             // cedula
             // 
             this.cedula.HeaderText = "Código";
@@ -134,6 +124,16 @@
             this.cargo.Name = "cargo";
             this.cargo.ReadOnly = true;
             this.cargo.Width = 220;
+            // 
+            // lbltitulo
+            // 
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.Location = new System.Drawing.Point(9, 12);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(100, 32);
+            this.lbltitulo.TabIndex = 72;
+            this.lbltitulo.Text = "Equipos";
             // 
             // btnmostrartodo
             // 
@@ -197,6 +197,7 @@
             this.Controls.Add(this.dgvequipos);
             this.Controls.Add(this.lbltitulo);
             this.Name = "Entrada_y_Salida_de_Equipos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entrada y Salida de Equipos";
             this.Load += new System.EventHandler(this.Entrada_y_Salida_de_Equipos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvequipos)).EndInit();

@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 430);
+            this.ClientSize = new System.Drawing.Size(712, 430);
             this.Controls.Add(this.tbbuscar);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.btnagregar);
@@ -196,6 +196,7 @@
             this.Controls.Add(this.btnentrada);
             this.Controls.Add(this.btnmostrartodo);
             this.Name = "Consultar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar";
             this.Load += new System.EventHandler(this.Consultar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvequipos)).EndInit();

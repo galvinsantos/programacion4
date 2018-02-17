@@ -196,6 +196,7 @@
             this.Controls.Add(this.tbpcodigo);
             this.Controls.Add(this.label1);
             this.Name = "Mantenimiento_de_Participantes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento de Participantes";
             this.ResumeLayout(false);
             this.PerformLayout();
