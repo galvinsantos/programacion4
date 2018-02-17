@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregar Equipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar Equipo.Designer.cs">
+      <DependentUpon>Agregar Equipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultar.Designer.cs">
+      <DependentUpon>Consultar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entrada y Salida de Equipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +77,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Agregar Equipo.resx">
+      <DependentUpon>Agregar Equipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultar.resx">
+      <DependentUpon>Consultar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entrada y Salida de Equipos.resx">
       <DependentUpon>Entrada y Salida de Equipos.cs</DependentUpon>
     </EmbeddedResource>
