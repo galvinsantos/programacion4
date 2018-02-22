@@ -20,7 +20,30 @@ namespace Gestion_de_Equipos
 
         private void Consultar_Load(object sender, EventArgs e)
         {
-            cbtipobusqueda.SelectedValue = 1;
+            cbtipobusqueda.SelectedIndex = 1;
+        }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            if (cbtipobusqueda.Text == "Participante")
+            {
+                Form f = new Mantenimiento_de_Participantes();
+                f.ShowDialog();
+            }
+            else
+            {
+                if (cbtipobusqueda.Text == "Equipos")
+                {
+                    Form f = new Mantenimiento_de_Equipos();
+                    f.ShowDialog();
+                }
+                else
+                {
+                    Form f = new Mantenimiento_Empleado();
+                    f.ShowDialog();
+                }
+            }
+
         }
     }
 }

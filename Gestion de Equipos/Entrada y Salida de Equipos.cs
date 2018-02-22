@@ -15,11 +15,18 @@ namespace Gestion_de_Equipos
         public Entrada_y_Salida_de_Equipos()
         {
             InitializeComponent();
+
         }
 
         private void Entrada_y_Salida_de_Equipos_Load(object sender, EventArgs e)
         {
-            cbtipobusqueda.SelectedValue = 1;
+            cbtipobusqueda.SelectedIndex = 1;
+        }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            Form f = new Mantenimiento_de_Equipos();
+            f.ShowDialog();
         }
     }
 }

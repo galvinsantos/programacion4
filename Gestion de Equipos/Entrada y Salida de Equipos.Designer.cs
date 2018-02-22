@@ -73,6 +73,7 @@
             this.btnagregar.TabIndex = 69;
             this.btnagregar.Text = "Agregar Equipo (+)";
             this.btnagregar.UseVisualStyleBackColor = false;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // dgvequipos
             // 

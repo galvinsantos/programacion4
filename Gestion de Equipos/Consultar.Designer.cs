@@ -38,8 +38,6 @@
             this.cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.cbtipobusqueda = new System.Windows.Forms.ComboBox();
-            this.btnsalida = new System.Windows.Forms.Button();
-            this.btnentrada = new System.Windows.Forms.Button();
             this.btnmostrartodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvequipos)).BeginInit();
             this.SuspendLayout();
@@ -71,8 +69,9 @@
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(126, 39);
             this.btnagregar.TabIndex = 79;
-            this.btnagregar.Text = "Agregar Equipo (+)";
+            this.btnagregar.Text = "Agregar (+)";
             this.btnagregar.UseVisualStyleBackColor = false;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // dgvequipos
             // 
@@ -148,35 +147,13 @@
             this.cbtipobusqueda.Size = new System.Drawing.Size(110, 21);
             this.cbtipobusqueda.TabIndex = 83;
             // 
-            // btnsalida
-            // 
-            this.btnsalida.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.btnsalida.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.btnsalida.Location = new System.Drawing.Point(507, 383);
-            this.btnsalida.Name = "btnsalida";
-            this.btnsalida.Size = new System.Drawing.Size(155, 38);
-            this.btnsalida.TabIndex = 81;
-            this.btnsalida.Text = "Dar Salida";
-            this.btnsalida.UseVisualStyleBackColor = false;
-            // 
-            // btnentrada
-            // 
-            this.btnentrada.BackColor = System.Drawing.Color.Azure;
-            this.btnentrada.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnentrada.Location = new System.Drawing.Point(36, 383);
-            this.btnentrada.Name = "btnentrada";
-            this.btnentrada.Size = new System.Drawing.Size(155, 38);
-            this.btnentrada.TabIndex = 82;
-            this.btnentrada.Text = "Dar Entrada";
-            this.btnentrada.UseVisualStyleBackColor = false;
-            // 
             // btnmostrartodo
             // 
             this.btnmostrartodo.BackColor = System.Drawing.Color.White;
             this.btnmostrartodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmostrartodo.Location = new System.Drawing.Point(244, 383);
+            this.btnmostrartodo.Location = new System.Drawing.Point(12, 383);
             this.btnmostrartodo.Name = "btnmostrartodo";
-            this.btnmostrartodo.Size = new System.Drawing.Size(214, 38);
+            this.btnmostrartodo.Size = new System.Drawing.Size(686, 38);
             this.btnmostrartodo.TabIndex = 77;
             this.btnmostrartodo.Text = "Mostrar Todos";
             this.btnmostrartodo.UseVisualStyleBackColor = false;
@@ -192,8 +169,6 @@
             this.Controls.Add(this.dgvequipos);
             this.Controls.Add(this.lbltitulo);
             this.Controls.Add(this.cbtipobusqueda);
-            this.Controls.Add(this.btnsalida);
-            this.Controls.Add(this.btnentrada);
             this.Controls.Add(this.btnmostrartodo);
             this.Name = "Consultar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -217,8 +192,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cargo;
         private System.Windows.Forms.Label lbltitulo;
         private System.Windows.Forms.ComboBox cbtipobusqueda;
-        private System.Windows.Forms.Button btnsalida;
-        private System.Windows.Forms.Button btnentrada;
         private System.Windows.Forms.Button btnmostrartodo;
     }
 }
