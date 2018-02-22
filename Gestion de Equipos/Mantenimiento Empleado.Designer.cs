@@ -32,15 +32,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btpdelete = new System.Windows.Forms.Button();
             this.btnactualizarservicio = new System.Windows.Forms.Button();
-            this.tbdias = new System.Windows.Forms.TextBox();
+            this.txtdireccion = new System.Windows.Forms.TextBox();
             this.lblparticipante = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtcedula = new System.Windows.Forms.TextBox();
             this.lblmarca = new System.Windows.Forms.Label();
-            this.tbpprecio = new System.Windows.Forms.TextBox();
+            this.txttelefono = new System.Windows.Forms.TextBox();
             this.lblestado = new System.Windows.Forms.Label();
-            this.tbpnombre = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbpcodigo = new System.Windows.Forms.TextBox();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -84,14 +84,15 @@
             this.btnactualizarservicio.TabIndex = 78;
             this.btnactualizarservicio.Text = "Guardar";
             this.btnactualizarservicio.UseVisualStyleBackColor = true;
+            this.btnactualizarservicio.Click += new System.EventHandler(this.btnactualizarservicio_Click);
             // 
-            // tbdias
+            // txtdireccion
             // 
-            this.tbdias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbdias.Location = new System.Drawing.Point(155, 184);
-            this.tbdias.Name = "tbdias";
-            this.tbdias.Size = new System.Drawing.Size(112, 23);
-            this.tbdias.TabIndex = 77;
+            this.txtdireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtdireccion.Location = new System.Drawing.Point(155, 184);
+            this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.Size = new System.Drawing.Size(112, 23);
+            this.txtdireccion.TabIndex = 77;
             // 
             // lblparticipante
             // 
@@ -103,13 +104,13 @@
             this.lblparticipante.TabIndex = 85;
             this.lblparticipante.Text = "Dirección";
             // 
-            // textBox1
+            // txtcedula
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox1.Location = new System.Drawing.Point(153, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 23);
-            this.textBox1.TabIndex = 75;
+            this.txtcedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtcedula.Location = new System.Drawing.Point(153, 122);
+            this.txtcedula.Name = "txtcedula";
+            this.txtcedula.Size = new System.Drawing.Size(194, 23);
+            this.txtcedula.TabIndex = 75;
             // 
             // lblmarca
             // 
@@ -121,13 +122,13 @@
             this.lblmarca.TabIndex = 83;
             this.lblmarca.Text = "Cédula";
             // 
-            // tbpprecio
+            // txttelefono
             // 
-            this.tbpprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbpprecio.Location = new System.Drawing.Point(154, 153);
-            this.tbpprecio.Name = "tbpprecio";
-            this.tbpprecio.Size = new System.Drawing.Size(112, 23);
-            this.tbpprecio.TabIndex = 76;
+            this.txttelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txttelefono.Location = new System.Drawing.Point(154, 153);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(112, 23);
+            this.txttelefono.TabIndex = 76;
             // 
             // lblestado
             // 
@@ -139,13 +140,13 @@
             this.lblestado.TabIndex = 84;
             this.lblestado.Text = "Teléfono";
             // 
-            // tbpnombre
+            // txtnombre
             // 
-            this.tbpnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbpnombre.Location = new System.Drawing.Point(153, 93);
-            this.tbpnombre.Name = "tbpnombre";
-            this.tbpnombre.Size = new System.Drawing.Size(238, 23);
-            this.tbpnombre.TabIndex = 74;
+            this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtnombre.Location = new System.Drawing.Point(153, 93);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(238, 23);
+            this.txtnombre.TabIndex = 74;
             // 
             // label2
             // 
@@ -157,14 +158,14 @@
             this.label2.TabIndex = 82;
             this.label2.Text = "Nombre";
             // 
-            // tbpcodigo
+            // txtcodigo
             // 
-            this.tbpcodigo.Enabled = false;
-            this.tbpcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbpcodigo.Location = new System.Drawing.Point(153, 61);
-            this.tbpcodigo.Name = "tbpcodigo";
-            this.tbpcodigo.Size = new System.Drawing.Size(90, 23);
-            this.tbpcodigo.TabIndex = 73;
+            this.txtcodigo.Enabled = false;
+            this.txtcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtcodigo.Location = new System.Drawing.Point(153, 61);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(90, 23);
+            this.txtcodigo.TabIndex = 73;
             // 
             // label1
             // 
@@ -185,15 +186,15 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btpdelete);
             this.Controls.Add(this.btnactualizarservicio);
-            this.Controls.Add(this.tbdias);
+            this.Controls.Add(this.txtdireccion);
             this.Controls.Add(this.lblparticipante);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtcedula);
             this.Controls.Add(this.lblmarca);
-            this.Controls.Add(this.tbpprecio);
+            this.Controls.Add(this.txttelefono);
             this.Controls.Add(this.lblestado);
-            this.Controls.Add(this.tbpnombre);
+            this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbpcodigo);
+            this.Controls.Add(this.txtcodigo);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Mantenimiento_Empleado";
@@ -210,15 +211,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btpdelete;
         private System.Windows.Forms.Button btnactualizarservicio;
-        private System.Windows.Forms.TextBox tbdias;
+        private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.Label lblparticipante;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtcedula;
         private System.Windows.Forms.Label lblmarca;
-        private System.Windows.Forms.TextBox tbpprecio;
+        private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label lblestado;
-        private System.Windows.Forms.TextBox tbpnombre;
+        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbpcodigo;
+        private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label label1;
     }
 }
