@@ -16,5 +16,17 @@ namespace Gestion_de_Equipos
         {
             InitializeComponent();
         }
+
+        private void btnentrada_Click(object sender, EventArgs e)
+        {
+            //MenuPrincipal.TipoProceso = 1;
+            this.Close();
+        }
+
+        private void btnsalida_Click(object sender, EventArgs e)
+        {
+            //MenuPrincipal.TipoProceso = 2;
+            this.Close();
+        }
     }
 }

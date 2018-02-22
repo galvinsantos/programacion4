@@ -98,6 +98,7 @@
             this.dgvequipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvequipos.Size = new System.Drawing.Size(683, 319);
             this.dgvequipos.TabIndex = 68;
+            this.dgvequipos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvequipos_CellDoubleClick);
             // 
             // cedula
             // 

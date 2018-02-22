@@ -71,6 +71,7 @@ namespace Gestion_de_Equipos
             if (cbtipobusqueda.Text == "Participante")
             {
                 Form f = new Mantenimiento_de_Participantes();
+                Mantenimiento_de_Participantes.modificar = true;
                 f.ShowDialog();
             }
             else
@@ -78,11 +79,13 @@ namespace Gestion_de_Equipos
                 if (cbtipobusqueda.Text == "Equipos")
                 {
                     Form f = new Mantenimiento_de_Equipos();
+                    Mantenimiento_de_Equipos.modificar = true;
                     f.ShowDialog();
                 }
                 else
                 {
                     Form f = new Mantenimiento_Empleado();
+                    Mantenimiento_Empleado.modificar = true;
                     f.ShowDialog();
                 }
             }

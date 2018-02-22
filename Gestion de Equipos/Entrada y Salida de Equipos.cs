@@ -68,5 +68,11 @@ namespace Gestion_de_Equipos
         {
 
         }
+
+        private void dgvequipos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form f = new EntradaSalida();
+            f.ShowDialog();
+        }
     }
 }

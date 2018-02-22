@@ -43,6 +43,7 @@
             this.btnsalida.TabIndex = 76;
             this.btnsalida.Text = "Dar Salida";
             this.btnsalida.UseVisualStyleBackColor = false;
+            this.btnsalida.Click += new System.EventHandler(this.btnsalida_Click);
             // 
             // btnentrada
             // 
@@ -54,6 +55,7 @@
             this.btnentrada.TabIndex = 75;
             this.btnentrada.Text = "Dar Entrada";
             this.btnentrada.UseVisualStyleBackColor = false;
+            this.btnentrada.Click += new System.EventHandler(this.btnentrada_Click);
             // 
             // lbltitulo
             // 
