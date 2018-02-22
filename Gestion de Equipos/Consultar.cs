@@ -45,5 +45,47 @@ namespace Gestion_de_Equipos
             }
 
         }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        public void Buscar()
+        {
+
+        }
+
+        private void btnmostrartodo_Click(object sender, EventArgs e)
+        {
+            MostrarTodo();
+        }
+
+        public void MostrarTodo()
+        {
+
+        }
+
+        private void dgvequipos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (cbtipobusqueda.Text == "Participante")
+            {
+                Form f = new Mantenimiento_de_Participantes();
+                f.ShowDialog();
+            }
+            else
+            {
+                if (cbtipobusqueda.Text == "Equipos")
+                {
+                    Form f = new Mantenimiento_de_Equipos();
+                    f.ShowDialog();
+                }
+                else
+                {
+                    Form f = new Mantenimiento_Empleado();
+                    f.ShowDialog();
+                }
+            }
+        }
     }
 }

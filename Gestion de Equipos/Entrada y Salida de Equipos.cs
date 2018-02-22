@@ -28,5 +28,45 @@ namespace Gestion_de_Equipos
             Form f = new Mantenimiento_de_Equipos();
             f.ShowDialog();
         }
+
+        private void btnentrada_Click(object sender, EventArgs e)
+        {
+            DarEntrada();
+        }
+
+        public void DarEntrada()
+        {
+
+        }
+
+        public void DarSalida()
+        {
+
+        }
+
+        private void btnsalida_Click(object sender, EventArgs e)
+        {
+            DarSalida();
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        public void Buscar()
+        {
+
+        }
+
+        private void btnmostrartodo_Click(object sender, EventArgs e)
+        {
+            MostrarTodos();
+        }
+
+        public void MostrarTodos()
+        {
+
+        }
     }
 }

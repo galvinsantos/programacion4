@@ -63,6 +63,7 @@
             this.btnbuscar.TabIndex = 67;
             this.btnbuscar.Text = "Buscar";
             this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btnagregar
             // 
@@ -146,6 +147,7 @@
             this.btnmostrartodo.TabIndex = 67;
             this.btnmostrartodo.Text = "Mostrar Todos";
             this.btnmostrartodo.UseVisualStyleBackColor = false;
+            this.btnmostrartodo.Click += new System.EventHandler(this.btnmostrartodo_Click);
             // 
             // btnentrada
             // 
@@ -157,6 +159,7 @@
             this.btnentrada.TabIndex = 73;
             this.btnentrada.Text = "Dar Entrada";
             this.btnentrada.UseVisualStyleBackColor = false;
+            this.btnentrada.Click += new System.EventHandler(this.btnentrada_Click);
             // 
             // btnsalida
             // 
@@ -168,6 +171,7 @@
             this.btnsalida.TabIndex = 73;
             this.btnsalida.Text = "Dar Salida";
             this.btnsalida.UseVisualStyleBackColor = false;
+            this.btnsalida.Click += new System.EventHandler(this.btnsalida_Click);
             // 
             // cbtipobusqueda
             // 

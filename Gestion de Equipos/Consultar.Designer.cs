@@ -61,6 +61,7 @@
             this.btnbuscar.TabIndex = 76;
             this.btnbuscar.Text = "Buscar";
             this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btnagregar
             // 
@@ -95,6 +96,7 @@
             this.dgvequipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvequipos.Size = new System.Drawing.Size(683, 319);
             this.dgvequipos.TabIndex = 78;
+            this.dgvequipos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvequipos_CellDoubleClick);
             // 
             // cedula
             // 
@@ -157,6 +159,7 @@
             this.btnmostrartodo.TabIndex = 77;
             this.btnmostrartodo.Text = "Mostrar Todos";
             this.btnmostrartodo.UseVisualStyleBackColor = false;
+            this.btnmostrartodo.Click += new System.EventHandler(this.btnmostrartodo_Click);
             // 
             // Consultar
             // 

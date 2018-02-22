@@ -12,9 +12,26 @@ namespace Gestion_de_Equipos
 {
     public partial class Mantenimiento_de_Participantes : Form
     {
+        public static bool modificar = false;
+
         public Mantenimiento_de_Participantes()
         {
             InitializeComponent();
+        }
+
+        private void Mantenimiento_de_Participantes_Load(object sender, EventArgs e)
+        {
+
+            if (modificar)
+            {
+                Cargar();
+            }
+            else { }
+        }
+
+        public void Cargar()
+        {
+
         }
     }
 }

@@ -12,9 +12,25 @@ namespace Gestion_de_Equipos
 {
     public partial class Mantenimiento_de_Equipos : Form
     {
+        public static bool modificar = false;
+
         public Mantenimiento_de_Equipos()
         {
             InitializeComponent();
+        }
+
+        private void Mantenimiento_de_Equipos_Load(object sender, EventArgs e)
+        {
+            if (modificar)
+            {
+                Cargar();
+            }
+            else { }
+        }
+
+        public void Cargar()
+        {
+
         }
     }
 }

@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntradaSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaSalida.Designer.cs">
+      <DependentUpon>EntradaSalida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimiento de Equipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EntradaSalida.resx">
+      <DependentUpon>EntradaSalida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento de Equipos.resx">
       <DependentUpon>Mantenimiento de Equipos.cs</DependentUpon>
     </EmbeddedResource>

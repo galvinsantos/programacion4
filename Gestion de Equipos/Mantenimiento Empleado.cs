@@ -13,6 +13,8 @@ namespace Gestion_de_Equipos
 {
     public partial class Mantenimiento_Empleado : Form
     {
+        public static bool modificar = false;
+
         public Mantenimiento_Empleado()
         {
             InitializeComponent();
@@ -36,6 +38,21 @@ namespace Gestion_de_Equipos
 
             cmd.ExecuteNonQuery();
             con.Close();
+        }
+
+        private void Mantenimiento_Empleado_Load(object sender, EventArgs e)
+        {
+
+            if (modificar)
+            {
+                Cargar();
+            }
+            else { }
+        }
+
+        public void Cargar()
+        {
+
         }
     }
 }

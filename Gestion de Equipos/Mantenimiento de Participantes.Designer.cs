@@ -198,6 +198,7 @@
             this.Name = "Mantenimiento_de_Participantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento de Participantes";
+            this.Load += new System.EventHandler(this.Mantenimiento_de_Participantes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -200,6 +200,7 @@
             this.Name = "Mantenimiento_Empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento de Empleados";
+            this.Load += new System.EventHandler(this.Mantenimiento_Empleado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
