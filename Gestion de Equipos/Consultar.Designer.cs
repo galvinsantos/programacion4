@@ -32,13 +32,14 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.dgvequipos = new System.Windows.Forms.DataGridView();
-            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sueldobruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.cbtipobusqueda = new System.Windows.Forms.ComboBox();
             this.btnmostrartodo = new System.Windows.Forms.Button();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvequipos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,10 +84,11 @@
             this.dgvequipos.BackgroundColor = System.Drawing.Color.Azure;
             this.dgvequipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvequipos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cedula,
-            this.Nombre,
-            this.sueldobruto,
-            this.cargo});
+            this.codigo,
+            this.nomb,
+            this.carrera,
+            this.telefono,
+            this.direccion});
             this.dgvequipos.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvequipos.Location = new System.Drawing.Point(15, 51);
             this.dgvequipos.MultiSelect = false;
@@ -97,34 +99,6 @@
             this.dgvequipos.Size = new System.Drawing.Size(683, 319);
             this.dgvequipos.TabIndex = 78;
             this.dgvequipos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvequipos_CellDoubleClick);
-            // 
-            // cedula
-            // 
-            this.cedula.HeaderText = "Código";
-            this.cedula.Name = "cedula";
-            this.cedula.ReadOnly = true;
-            this.cedula.Width = 60;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre del Equipo";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 260;
-            // 
-            // sueldobruto
-            // 
-            this.sueldobruto.HeaderText = "Estado";
-            this.sueldobruto.Name = "sueldobruto";
-            this.sueldobruto.ReadOnly = true;
-            this.sueldobruto.Width = 150;
-            // 
-            // cargo
-            // 
-            this.cargo.HeaderText = "Participante";
-            this.cargo.Name = "cargo";
-            this.cargo.ReadOnly = true;
-            this.cargo.Width = 220;
             // 
             // lbltitulo
             // 
@@ -148,6 +122,7 @@
             this.cbtipobusqueda.Name = "cbtipobusqueda";
             this.cbtipobusqueda.Size = new System.Drawing.Size(110, 21);
             this.cbtipobusqueda.TabIndex = 83;
+            this.cbtipobusqueda.TextChanged += new System.EventHandler(this.cbtipobusqueda_TextChanged);
             // 
             // btnmostrartodo
             // 
@@ -160,6 +135,40 @@
             this.btnmostrartodo.Text = "Mostrar Todos";
             this.btnmostrartodo.UseVisualStyleBackColor = false;
             this.btnmostrartodo.Click += new System.EventHandler(this.btnmostrartodo_Click);
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 50;
+            // 
+            // nomb
+            // 
+            this.nomb.HeaderText = "Nombre";
+            this.nomb.Name = "nomb";
+            this.nomb.ReadOnly = true;
+            this.nomb.Width = 200;
+            // 
+            // carrera
+            // 
+            this.carrera.HeaderText = "Carrera";
+            this.carrera.Name = "carrera";
+            this.carrera.ReadOnly = true;
+            this.carrera.Width = 150;
+            // 
+            // telefono
+            // 
+            this.telefono.HeaderText = "Telefono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            this.direccion.Width = 180;
             // 
             // Consultar
             // 
@@ -189,12 +198,13 @@
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.DataGridView dgvequipos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sueldobruto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cargo;
         private System.Windows.Forms.Label lbltitulo;
         private System.Windows.Forms.ComboBox cbtipobusqueda;
         private System.Windows.Forms.Button btnmostrartodo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomb;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carrera;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
     }
 }

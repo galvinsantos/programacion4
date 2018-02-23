@@ -32,17 +32,17 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.dgvequipos = new System.Windows.Forms.DataGridView();
-            this.lbltitulo = new System.Windows.Forms.Label();
-            this.btnmostrartodo = new System.Windows.Forms.Button();
-            this.btnentrada = new System.Windows.Forms.Button();
-            this.btnsalida = new System.Windows.Forms.Button();
-            this.cbtipobusqueda = new System.Windows.Forms.ComboBox();
             this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sueldobruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbltitulo = new System.Windows.Forms.Label();
+            this.btnmostrartodo = new System.Windows.Forms.Button();
+            this.btnentrada = new System.Windows.Forms.Button();
+            this.btnsalida = new System.Windows.Forms.Button();
+            this.cbtipobusqueda = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvequipos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,6 +104,47 @@
             this.dgvequipos.TabIndex = 68;
             this.dgvequipos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvequipos_CellDoubleClick);
             // 
+            // cedula
+            // 
+            this.cedula.HeaderText = "Código";
+            this.cedula.Name = "cedula";
+            this.cedula.ReadOnly = true;
+            this.cedula.Width = 50;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre del Equipo";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 150;
+            // 
+            // sueldobruto
+            // 
+            this.sueldobruto.HeaderText = "Estado";
+            this.sueldobruto.Name = "sueldobruto";
+            this.sueldobruto.ReadOnly = true;
+            // 
+            // cargo
+            // 
+            this.cargo.HeaderText = "Participante";
+            this.cargo.Name = "cargo";
+            this.cargo.ReadOnly = true;
+            this.cargo.Width = 180;
+            // 
+            // empleado
+            // 
+            this.empleado.HeaderText = "Empleado";
+            this.empleado.Name = "empleado";
+            this.empleado.ReadOnly = true;
+            this.empleado.Width = 180;
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 70;
+            // 
             // lbltitulo
             // 
             this.lbltitulo.AutoSize = true;
@@ -158,52 +199,12 @@
             "ID",
             "Nombre",
             "Estado",
-            "Participante"});
-            this.cbtipobusqueda.Location = new System.Drawing.Point(156, 19);
+            "Participante",
+            "Empleado"});
+            this.cbtipobusqueda.Location = new System.Drawing.Point(156, 21);
             this.cbtipobusqueda.Name = "cbtipobusqueda";
             this.cbtipobusqueda.Size = new System.Drawing.Size(110, 21);
             this.cbtipobusqueda.TabIndex = 74;
-            // 
-            // cedula
-            // 
-            this.cedula.HeaderText = "Código";
-            this.cedula.Name = "cedula";
-            this.cedula.ReadOnly = true;
-            this.cedula.Width = 50;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre del Equipo";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 150;
-            // 
-            // sueldobruto
-            // 
-            this.sueldobruto.HeaderText = "Estado";
-            this.sueldobruto.Name = "sueldobruto";
-            this.sueldobruto.ReadOnly = true;
-            // 
-            // cargo
-            // 
-            this.cargo.HeaderText = "Participante";
-            this.cargo.Name = "cargo";
-            this.cargo.ReadOnly = true;
-            this.cargo.Width = 180;
-            // 
-            // empleado
-            // 
-            this.empleado.HeaderText = "Empleado";
-            this.empleado.Name = "empleado";
-            this.empleado.ReadOnly = true;
-            this.empleado.Width = 180;
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Width = 70;
             // 
             // Entrada_y_Salida_de_Equipos
             // 

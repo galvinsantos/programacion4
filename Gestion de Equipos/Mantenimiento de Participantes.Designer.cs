@@ -97,7 +97,7 @@
             // 
             this.lblmarca.AutoSize = true;
             this.lblmarca.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.lblmarca.Location = new System.Drawing.Point(55, 107);
+            this.lblmarca.Location = new System.Drawing.Point(56, 104);
             this.lblmarca.Name = "lblmarca";
             this.lblmarca.Size = new System.Drawing.Size(86, 24);
             this.lblmarca.TabIndex = 97;
@@ -115,7 +115,7 @@
             // 
             this.lblestado.AutoSize = true;
             this.lblestado.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.lblestado.Location = new System.Drawing.Point(44, 138);
+            this.lblestado.Location = new System.Drawing.Point(45, 135);
             this.lblestado.Name = "lblestado";
             this.lblestado.Size = new System.Drawing.Size(97, 24);
             this.lblestado.TabIndex = 98;
@@ -143,7 +143,7 @@
             // 
             this.tbpcodigo.Enabled = false;
             this.tbpcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbpcodigo.Location = new System.Drawing.Point(147, 46);
+            this.tbpcodigo.Location = new System.Drawing.Point(147, 49);
             this.tbpcodigo.Name = "tbpcodigo";
             this.tbpcodigo.Size = new System.Drawing.Size(90, 23);
             this.tbpcodigo.TabIndex = 87;
@@ -152,17 +152,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(36, 46);
+            this.label1.Location = new System.Drawing.Point(62, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 24);
+            this.label1.Size = new System.Drawing.Size(79, 24);
             this.label1.TabIndex = 95;
-            this.label1.Text = "Matrícula";
+            this.label1.Text = "Codigo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(36, 167);
+            this.label3.Location = new System.Drawing.Point(37, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 24);
             this.label3.TabIndex = 98;
