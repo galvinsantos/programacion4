@@ -29,11 +29,11 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
                 return Convert.ToBase64String(data);
             }
         }
-        SqlConnection cnx = new SqlConnection(@"Data Source = DESKTOP-5KI5B4T\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
-
+        SqlConnection cnx = new SqlConnection(@"Data Source = " + Environment.MachineName + "\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection cnx = new SqlConnection("Data Source = DESKTOP-5KI5B4T\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
+            SqlConnection cnx = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
             try
             {
                 //Filtra de la base de datos los usuarios y contracenas existentes. depende como estan los campos de la base de datos. 

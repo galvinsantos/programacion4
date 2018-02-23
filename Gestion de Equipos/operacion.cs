@@ -13,7 +13,7 @@ namespace Gestion_de_Equipos
     {
         public void AgregarEmpleado(string codigo, string nombre, string cedula, string telefono, string direccion)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-5KI5B4T\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source="+Environment.MachineName+"\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
             string strsql;
             strsql = "insert into clientes(codigo, nombre, cedula, telefono, direccion) values(@codigo, @nombre, @cedula, @telefono, @direccion)";
             SqlCommand cmd = new SqlCommand(strsql, con);
@@ -32,7 +32,7 @@ namespace Gestion_de_Equipos
 
         public DataTable ConsultaConResultado(string sql)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-5KI5B4T\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=" + Environment.MachineName + "\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
 
             try
             {
@@ -55,7 +55,7 @@ namespace Gestion_de_Equipos
 
         public DataSet DataSetConsulta(string sql)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-5KI5B4T\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=" + Environment.MachineName + "\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
 
             try
             {
