@@ -93,6 +93,7 @@
     <Compile Include="Mantenimiento Empleado.Designer.cs">
       <DependentUpon>Mantenimiento Empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="operacion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EntradaSalida.resx">
