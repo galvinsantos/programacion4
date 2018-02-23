@@ -116,8 +116,8 @@
             this.cbtipobusqueda.FormattingEnabled = true;
             this.cbtipobusqueda.Items.AddRange(new object[] {
             "Participante",
-            "Equipos",
-            "Empleados"});
+            "Empleados",
+            "Equipos"});
             this.cbtipobusqueda.Location = new System.Drawing.Point(129, 18);
             this.cbtipobusqueda.Name = "cbtipobusqueda";
             this.cbtipobusqueda.Size = new System.Drawing.Size(110, 21);

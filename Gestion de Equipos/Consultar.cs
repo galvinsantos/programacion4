@@ -14,6 +14,7 @@ namespace Gestion_de_Equipos
     {
         //Total 730px
         operacion oper = new operacion();
+        string nombretabla = "";
 
         public Consultar()
         {
@@ -23,7 +24,7 @@ namespace Gestion_de_Equipos
 
         private void Consultar_Load(object sender, EventArgs e)
         {
-            cbtipobusqueda.SelectedIndex = 1;
+            cbtipobusqueda.SelectedIndex = 0;
             MostrarTodo();
         }
 
@@ -68,7 +69,9 @@ namespace Gestion_de_Equipos
         public void MostrarTodo()
         {
 
-            DataSet ds = oper.DataSetConsulta("SELECT * FROM clientes;");
+            EstablecerCriterios();
+
+            DataSet ds = oper.DataSetConsulta("SELECT * FROM " + nombretabla + ";");
 
             dgvequipos.Rows.Clear();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -115,7 +118,7 @@ namespace Gestion_de_Equipos
 
         public void EstablecerCriterios()
         {
-            string nombretabla = "";
+            
 
             //ESTABLECER CRITERIOS PARA PARTICIPANTES
             if(cbtipobusqueda.SelectedIndex == 1)
@@ -125,12 +128,11 @@ namespace Gestion_de_Equipos
                 dgvequipos.Columns[2].HeaderText = "Carrera";
                 dgvequipos.Columns[3].HeaderText = "Teléfono";
                 dgvequipos.Columns[4].HeaderText = "Direción";
-
             }
             else
             {
                 //ESTABLECER CRITERIOS PARA EMPLEADOS
-                if (cbtipobusqueda.SelectedIndex == 1)
+                if (cbtipobusqueda.SelectedIndex == 2)
                 {
                     nombretabla = "empleados";
                     dgvequipos.Columns[1].HeaderText = "Nombre";
