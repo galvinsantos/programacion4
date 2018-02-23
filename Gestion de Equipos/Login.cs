@@ -73,5 +73,10 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
                 cnx.Close();
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
