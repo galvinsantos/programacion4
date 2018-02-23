@@ -29,7 +29,7 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
                 return Convert.ToBase64String(data);
             }
         }
-        SqlConnection cnx = new SqlConnection(@"Data Source = base de datos");
+        SqlConnection cnx = new SqlConnection(@"Data Source = DESKTOP-5KI5B4T\SQLEXPRESS");
 
         private void button1_Click(object sender, EventArgs e)
         {
