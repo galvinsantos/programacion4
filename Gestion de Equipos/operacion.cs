@@ -52,5 +52,28 @@ namespace Gestion_de_Equipos
             }
 
         }
+
+        public DataSet DataSetConsulta(string sql)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-5KI5B4T\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
+
+            try
+            {
+                con.Open();
+                DataSet ds = new DataSet();
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(ds);
+                return ds;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
     }
 }

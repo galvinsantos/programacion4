@@ -12,6 +12,8 @@ namespace Gestion_de_Equipos
 {
     public partial class Consultar : Form
     {
+        operacion oper = new operacion();
+
         public Consultar()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace Gestion_de_Equipos
         private void Consultar_Load(object sender, EventArgs e)
         {
             cbtipobusqueda.SelectedIndex = 1;
+            MostrarTodo();
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
@@ -63,6 +66,18 @@ namespace Gestion_de_Equipos
 
         public void MostrarTodo()
         {
+            DataSet ds = oper.DataSetConsulta("SELECT * FROM clientes;");
+
+            dgvequipos.Rows.Clear();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                dgvequipos.Rows.Add();
+                for (int k = 0; k < 4; k++)
+                {
+                    dgvequipos.Rows[i].Cells[k].Value = ds.Tables[0].Rows[i][k].ToString();
+                }
+                
+            }
 
         }
 
