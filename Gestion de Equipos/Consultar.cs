@@ -12,6 +12,7 @@ namespace Gestion_de_Equipos
 {
     public partial class Consultar : Form
     {
+        //Total 730px
         operacion oper = new operacion();
 
         public Consultar()
@@ -66,6 +67,7 @@ namespace Gestion_de_Equipos
 
         public void MostrarTodo()
         {
+
             DataSet ds = oper.DataSetConsulta("SELECT * FROM clientes;");
 
             dgvequipos.Rows.Clear();
@@ -104,6 +106,51 @@ namespace Gestion_de_Equipos
                     f.ShowDialog();
                 }
             }
+        }
+
+        private void cbtipobusqueda_TextChanged(object sender, EventArgs e)
+        {
+            EstablecerCriterios();
+        }
+
+        public void EstablecerCriterios()
+        {
+            string nombretabla = "";
+
+            //ESTABLECER CRITERIOS PARA PARTICIPANTES
+            if(cbtipobusqueda.SelectedIndex == 1)
+            {
+                nombretabla = "participantes";
+                dgvequipos.Columns[1].HeaderText = "Nombre";
+                dgvequipos.Columns[2].HeaderText = "Carrera";
+                dgvequipos.Columns[3].HeaderText = "Teléfono";
+                dgvequipos.Columns[4].HeaderText = "Direción";
+
+            }
+            else
+            {
+                //ESTABLECER CRITERIOS PARA EMPLEADOS
+                if (cbtipobusqueda.SelectedIndex == 1)
+                {
+                    nombretabla = "empleados";
+                    dgvequipos.Columns[1].HeaderText = "Nombre";
+                    dgvequipos.Columns[2].HeaderText = "Cédula";
+                    dgvequipos.Columns[3].HeaderText = "Teléfono";
+                    dgvequipos.Columns[4].HeaderText = "Direción";
+                }
+                else
+                {
+                    //ESTABLECER CRITERIOS PARA EQUIPOS
+                    nombretabla = "equipos";
+                    dgvequipos.Columns[1].HeaderText = "Nombre";
+                    dgvequipos.Columns[2].HeaderText = "Estado";
+                    dgvequipos.Columns[3].HeaderText = "Ubicación";
+                    dgvequipos.Columns[4].HeaderText = "Participante";
+                }
+            }
+
+
+
         }
     }
 }
