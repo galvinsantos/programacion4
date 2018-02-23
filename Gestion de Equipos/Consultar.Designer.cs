@@ -51,6 +51,7 @@
             this.tbbuscar.Name = "tbbuscar";
             this.tbbuscar.Size = new System.Drawing.Size(204, 29);
             this.tbbuscar.TabIndex = 75;
+            this.tbbuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbbuscar_KeyPress);
             // 
             // btnbuscar
             // 

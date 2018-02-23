@@ -58,7 +58,18 @@ namespace Gestion_de_Equipos
 
         public void Buscar()
         {
+            DataSet ds = oper.DataSetConsulta("SELECT * FROM " + nombretabla + " WHERE nombre = '" + tbbuscar.Text + "';");
 
+            dgvequipos.Rows.Clear();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                dgvequipos.Rows.Add();
+                for (int k = 0; k < 4; k++)
+                {
+                    dgvequipos.Rows[i].Cells[k].Value = ds.Tables[0].Rows[i][k].ToString();
+                }
+
+            }
         }
 
         private void btnmostrartodo_Click(object sender, EventArgs e)
@@ -121,7 +132,7 @@ namespace Gestion_de_Equipos
             
 
             //ESTABLECER CRITERIOS PARA PARTICIPANTES
-            if(cbtipobusqueda.SelectedIndex == 1)
+            if(cbtipobusqueda.SelectedIndex == 0)
             {
                 nombretabla = "participantes";
                 dgvequipos.Columns[1].HeaderText = "Nombre";
@@ -132,7 +143,7 @@ namespace Gestion_de_Equipos
             else
             {
                 //ESTABLECER CRITERIOS PARA EMPLEADOS
-                if (cbtipobusqueda.SelectedIndex == 2)
+                if (cbtipobusqueda.SelectedIndex == 1)
                 {
                     nombretabla = "empleados";
                     dgvequipos.Columns[1].HeaderText = "Nombre";
@@ -153,6 +164,22 @@ namespace Gestion_de_Equipos
 
 
 
+        }
+
+        private void tbbuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                Buscar();
+                e.Handled = true;
+            }
+            else
+            {
+                if (e.KeyChar == 27)
+                {
+                    e.Handled = true;
+                }
+            }
         }
     }
 }
