@@ -1,0 +1,46 @@
+CREATE TABLE empleados
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [nombre] NVARCHAR(50) NULL, 
+    [ceduña] NVARCHAR(50) NULL, 
+    [telefono] NVARCHAR(50) NULL, 
+    [direccion] NVARCHAR(50) NULL
+)
+
+
+CREATE TABLE equipos (
+    [Id] INT NOT NULL,
+    [nombre] NVARCHAR(50) NULL, 
+    [estado] NVARCHAR(50) NULL, 
+    [ubicacion] NVARCHAR(50) NULL, 
+    [participante] NVARCHAR(50) NULL, 
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE login
+(
+    [usuario] NVARCHAR(MAX) NULL, 
+    [contrasena] NVARCHAR(MAX) NULL
+)
+
+CREATE TABLE participantes
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [nombre] NVARCHAR(50) NULL, 
+    [carrera] NVARCHAR(50) NULL, 
+    [telefono] NVARCHAR(50) NULL, 
+    [direccion] NVARCHAR(50) NULL
+)
+
+CREATE TABLE procesos (
+    [Id] INT NOT NULL,
+    [idequipo] NVARCHAR(50) NULL, 
+    [estado] NVARCHAR(50) NULL, 
+    [idparticipante] NVARCHAR(50) NULL, 
+    [idempleado] NVARCHAR(50) NULL, 
+    [fecha] DATE NULL, 
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
