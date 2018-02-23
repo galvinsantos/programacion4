@@ -29,15 +29,15 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
                 return Convert.ToBase64String(data);
             }
         }
-        SqlConnection cnx = new SqlConnection(@"Data Source = DESKTOP-5KI5B4T\SQLEXPRESS");
+        SqlConnection cnx = new SqlConnection(@"Data Source = DESKTOP-5KI5B4T\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection cnx = new SqlConnection("Data Source = base de datos");
+            SqlConnection cnx = new SqlConnection("Data Source = DESKTOP-5KI5B4T\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
             try
             {
                 //Filtra de la base de datos los usuarios y contracenas existentes. depende como estan los campos de la base de datos. 
-                String query = "select count(*) from login where usuario = '" + txtusuario.Text + "' and clave = '" + txtcontrasena.Text + "';";
+                String query = "select count(*) from login where usuario = '" + txtusuario.Text + "' and contrasena = '" + txtcontrasena.Text + "';";
 
                 SqlDataAdapter ad;
                 DataTable dt = new DataTable();
@@ -53,9 +53,9 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
                 if (dt.Rows[0][0].ToString() == "1")
                 {
                     //Oculta la tabla de login y abre la interfas pricipal
-                    this.Hide();
-                    Form main = new Form2();
-                    main.Show();
+                    this.Close();
+                    //Form main = new Form2();
+                    //main.Show();
                 }
                 else
                 {
