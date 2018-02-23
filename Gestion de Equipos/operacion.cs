@@ -15,7 +15,7 @@ namespace Gestion_de_Equipos
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-5KI5B4T\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
             string strsql;
-            strsql = "insert into clientes(txtcodigo, txtnombre, txtcedula, txttelefono, txtdireccion) values(@codigo, @nombre, @cedula, @telefono, @direccion)";
+            strsql = "insert into clientes(codigo, nombre, cedula, telefono, direccion) values(@codigo, @nombre, @cedula, @telefono, @direccion)";
             SqlCommand cmd = new SqlCommand(strsql, con);
 
             con.Open();
@@ -30,5 +30,27 @@ namespace Gestion_de_Equipos
             con.Close();
         }
 
+        public DataTable ConsultaConResultado(string sql)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-5KI5B4T\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
+
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
     }
 }
