@@ -84,6 +84,7 @@
             this.btnactualizarservicio.TabIndex = 65;
             this.btnactualizarservicio.Text = "Guardar";
             this.btnactualizarservicio.UseVisualStyleBackColor = true;
+            this.btnactualizarservicio.Click += new System.EventHandler(this.btnactualizarservicio_Click);
             // 
             // tbdias
             // 
