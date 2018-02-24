@@ -66,7 +66,7 @@ namespace Gestion_de_Equipos
                             "VALUES('" + txtidequipo.Text + "', 'RESERVADO', '" + idparticipante + "', '" + MenuPrincipal.idempleado + "',  '" + txtaula.Text + "', '" + fechatarget + "');");
 
                         //Actualizar el estado del equipo seleccionado
-                        oper.QuerySqlLibre("UPDATE equipos SET estado = 'RESERVADO', ubicacion = '"  + txtaula.Text + "', participante = '" + txtparticipantematricula.Text + "' WHERE id = '" + txtidequipo.Text + "';");
+                        oper.QuerySqlLibre("UPDATE equipos SET estado = 'RESERVADO', participante = '" + txtparticipantematricula.Text + "' WHERE id = '" + txtidequipo.Text + "';");
                         MessageBox.Show("El equipo fue reservado satisfactoriamente...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         NuevaReserva();
                     }

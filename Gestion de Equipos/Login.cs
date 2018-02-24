@@ -130,11 +130,21 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
                 if (e.KeyChar == 13)
                 {
                     LogIn();
+                    e.Handled = true;
                 }
                 else { }
                 IniciandoSesion = true;
             }
             else { }
+        }
+
+        private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                SendKeys.Send("{TAB}");
+                e.Handled = true;
+            }
         }
     }
 }

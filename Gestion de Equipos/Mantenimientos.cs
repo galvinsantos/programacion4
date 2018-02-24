@@ -33,7 +33,7 @@ namespace Gestion_de_Equipos
 
         private void button6_Click(object sender, EventArgs e)
         {
-            oper.QuerySqlLibre("INSERT INTO empleados (nombre, ceduña, telefono, dirreccion) VALUES ('" + txtnombre.Text + "','" + txtcedula.Text + "','" + txttelefono.Text + "','" + txtdireccion.Text + "');");
+            oper.QuerySqlLibre("INSERT INTO empleados (nombre, ceduña, telefono, dirreccion) VALUES ('" + txtnombreemp.Text + "','" + txtcedulaemp.Text + "','" + txttelefonoemp.Text + "','" + txtdireccionemp.Text + "');");
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -43,8 +43,16 @@ namespace Gestion_de_Equipos
 
         private void Mantenimientos_Load(object sender, EventArgs e)
         {
-
+            //Dar derehos al Administrador
+            if (MenuPrincipal.TipoUsuario == "Administrador")
+            {
+                
+            }
+            else//Quitar derechos
+            {
+                tabControl1.Controls.Remove(tabPage3);
+            }
         }
     }
-    
+
 }

@@ -60,17 +60,17 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnnuevoemp = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.txtdireccion = new System.Windows.Forms.TextBox();
+            this.btneliminaremp = new System.Windows.Forms.Button();
+            this.btnguardaremp = new System.Windows.Forms.Button();
+            this.txtdireccionemp = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtcedula = new System.Windows.Forms.TextBox();
+            this.txtcedulaemp = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.txttelefonoemp = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtnombreemp = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -409,17 +409,17 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button4);
+            this.tabPage3.Controls.Add(this.btnnuevoemp);
             this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Controls.Add(this.button6);
-            this.tabPage3.Controls.Add(this.txtdireccion);
+            this.tabPage3.Controls.Add(this.btneliminaremp);
+            this.tabPage3.Controls.Add(this.btnguardaremp);
+            this.tabPage3.Controls.Add(this.txtdireccionemp);
             this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.txtcedula);
+            this.tabPage3.Controls.Add(this.txtcedulaemp);
             this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.txttelefono);
+            this.tabPage3.Controls.Add(this.txttelefonoemp);
             this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.txtnombre);
+            this.tabPage3.Controls.Add(this.txtnombreemp);
             this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.txtcodigo);
             this.tabPage3.Controls.Add(this.label15);
@@ -430,15 +430,15 @@
             this.tabPage3.Text = "Mantenimiento de Empleados";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnnuevoemp
             // 
-            this.button4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(256, 272);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 39);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Nuevo";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnnuevoemp.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnuevoemp.Location = new System.Drawing.Point(256, 272);
+            this.btnnuevoemp.Name = "btnnuevoemp";
+            this.btnnuevoemp.Size = new System.Drawing.Size(102, 39);
+            this.btnnuevoemp.TabIndex = 5;
+            this.btnnuevoemp.Text = "Nuevo";
+            this.btnnuevoemp.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -451,34 +451,34 @@
             this.label10.TabIndex = 100;
             this.label10.Text = "Mantenimiento de Empleados";
             // 
-            // button5
+            // btneliminaremp
             // 
-            this.button5.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.button5.Location = new System.Drawing.Point(336, 233);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(93, 33);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Eliminar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btneliminaremp.Font = new System.Drawing.Font("Palatino Linotype", 12F);
+            this.btneliminaremp.Location = new System.Drawing.Point(336, 233);
+            this.btneliminaremp.Name = "btneliminaremp";
+            this.btneliminaremp.Size = new System.Drawing.Size(93, 33);
+            this.btneliminaremp.TabIndex = 6;
+            this.btneliminaremp.Text = "Eliminar";
+            this.btneliminaremp.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnguardaremp
             // 
-            this.button6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(224, 233);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(106, 33);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Guardar";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnguardaremp.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardaremp.Location = new System.Drawing.Point(224, 233);
+            this.btnguardaremp.Name = "btnguardaremp";
+            this.btnguardaremp.Size = new System.Drawing.Size(106, 33);
+            this.btnguardaremp.TabIndex = 4;
+            this.btnguardaremp.Text = "Guardar";
+            this.btnguardaremp.UseVisualStyleBackColor = true;
+            this.btnguardaremp.Click += new System.EventHandler(this.button6_Click);
             // 
-            // txtdireccion
+            // txtdireccionemp
             // 
-            this.txtdireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.txtdireccion.Location = new System.Drawing.Point(301, 194);
-            this.txtdireccion.Name = "txtdireccion";
-            this.txtdireccion.Size = new System.Drawing.Size(112, 23);
-            this.txtdireccion.TabIndex = 3;
+            this.txtdireccionemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtdireccionemp.Location = new System.Drawing.Point(301, 194);
+            this.txtdireccionemp.Name = "txtdireccionemp";
+            this.txtdireccionemp.Size = new System.Drawing.Size(112, 23);
+            this.txtdireccionemp.TabIndex = 3;
             // 
             // label11
             // 
@@ -490,13 +490,13 @@
             this.label11.TabIndex = 99;
             this.label11.Text = "Dirección";
             // 
-            // txtcedula
+            // txtcedulaemp
             // 
-            this.txtcedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.txtcedula.Location = new System.Drawing.Point(299, 132);
-            this.txtcedula.Name = "txtcedula";
-            this.txtcedula.Size = new System.Drawing.Size(194, 23);
-            this.txtcedula.TabIndex = 1;
+            this.txtcedulaemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtcedulaemp.Location = new System.Drawing.Point(299, 132);
+            this.txtcedulaemp.Name = "txtcedulaemp";
+            this.txtcedulaemp.Size = new System.Drawing.Size(194, 23);
+            this.txtcedulaemp.TabIndex = 1;
             // 
             // label12
             // 
@@ -508,13 +508,13 @@
             this.label12.TabIndex = 97;
             this.label12.Text = "Cédula";
             // 
-            // txttelefono
+            // txttelefonoemp
             // 
-            this.txttelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.txttelefono.Location = new System.Drawing.Point(300, 163);
-            this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(112, 23);
-            this.txttelefono.TabIndex = 2;
+            this.txttelefonoemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txttelefonoemp.Location = new System.Drawing.Point(300, 163);
+            this.txttelefonoemp.Name = "txttelefonoemp";
+            this.txttelefonoemp.Size = new System.Drawing.Size(112, 23);
+            this.txttelefonoemp.TabIndex = 2;
             // 
             // label13
             // 
@@ -526,13 +526,13 @@
             this.label13.TabIndex = 98;
             this.label13.Text = "Teléfono";
             // 
-            // txtnombre
+            // txtnombreemp
             // 
-            this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.txtnombre.Location = new System.Drawing.Point(299, 103);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(238, 23);
-            this.txtnombre.TabIndex = 0;
+            this.txtnombreemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtnombreemp.Location = new System.Drawing.Point(299, 103);
+            this.txtnombreemp.Name = "txtnombreemp";
+            this.txtnombreemp.Size = new System.Drawing.Size(238, 23);
+            this.txtnombreemp.TabIndex = 0;
             // 
             // label14
             // 
@@ -569,7 +569,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 401);
             this.Controls.Add(this.tabControl1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Mantenimientos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimientos";
             this.Load += new System.EventHandler(this.Mantenimientos_Load);
             this.tabControl1.ResumeLayout(false);
@@ -617,17 +620,17 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnnuevoemp;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox txtdireccion;
+        private System.Windows.Forms.Button btneliminaremp;
+        private System.Windows.Forms.Button btnguardaremp;
+        private System.Windows.Forms.TextBox txtdireccionemp;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtcedula;
+        private System.Windows.Forms.TextBox txtcedulaemp;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.TextBox txttelefonoemp;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txtnombreemp;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label label15;

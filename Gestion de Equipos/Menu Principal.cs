@@ -33,7 +33,7 @@ namespace Gestion_de_Equipos
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //IniciarSesion();
+            IniciarSesion();
         }
 
         public void IniciarSesion()
@@ -51,7 +51,16 @@ namespace Gestion_de_Equipos
             }
             else
             {
-                //Continuar
+                //Dar derehos al Administrador
+                if(TipoUsuario == "Administrador")
+                {
+                    Mantenimiento.DropDownItems[1].Visible = true;
+                }
+                else//Quitar derechos
+                {
+                    Mantenimiento.DropDownItems[1].Visible = false;
+                }
+
             }
 
 

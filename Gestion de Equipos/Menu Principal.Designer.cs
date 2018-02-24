@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dfgherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Mantenimiento = new System.Windows.Forms.ToolStripMenuItem();
             this.equiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Usuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.menu2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaYSalidaDeEquiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +50,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dfgherToolStripMenuItem,
+            this.Mantenimiento,
             this.menu2ToolStripMenuItem,
             this.salirToolStripMenuItem,
             this.salirToolStripMenuItem1});
@@ -60,14 +60,14 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // dfgherToolStripMenuItem
+            // Mantenimiento
             // 
-            this.dfgherToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Mantenimiento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.equiposToolStripMenuItem,
-            this.usuariosToolStripMenuItem});
-            this.dfgherToolStripMenuItem.Name = "dfgherToolStripMenuItem";
-            this.dfgherToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
-            this.dfgherToolStripMenuItem.Text = "Mantenimiento";
+            this.Usuarios});
+            this.Mantenimiento.Name = "Mantenimiento";
+            this.Mantenimiento.Size = new System.Drawing.Size(101, 20);
+            this.Mantenimiento.Text = "Mantenimiento";
             // 
             // equiposToolStripMenuItem
             // 
@@ -76,12 +76,12 @@
             this.equiposToolStripMenuItem.Text = "Mantenimientos";
             this.equiposToolStripMenuItem.Click += new System.EventHandler(this.equiposToolStripMenuItem_Click);
             // 
-            // usuariosToolStripMenuItem
+            // Usuarios
             // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            this.Usuarios.Name = "Usuarios";
+            this.Usuarios.Size = new System.Drawing.Size(161, 22);
+            this.Usuarios.Text = "Usuarios";
+            this.Usuarios.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // menu2ToolStripMenuItem
             // 
@@ -222,10 +222,10 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem dfgherToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Mantenimiento;
         private System.Windows.Forms.ToolStripMenuItem menu2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem equiposToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Usuarios;
         private System.Windows.Forms.ToolStripMenuItem entradaYSalidaDeEquiposToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
