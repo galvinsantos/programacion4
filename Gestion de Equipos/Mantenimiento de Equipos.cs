@@ -12,6 +12,8 @@ namespace Gestion_de_Equipos
 {
     public partial class Mantenimiento_de_Equipos : Form
     {
+        operacion oper = new operacion();
+
         public static bool modificar = false;
 
         public Mantenimiento_de_Equipos()
@@ -31,6 +33,11 @@ namespace Gestion_de_Equipos
         public void Cargar()
         {
 
+        }
+
+        private void btnactualizarservicio_Click(object sender, EventArgs e)
+        {
+            oper.
         }
     }
 }

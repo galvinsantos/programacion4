@@ -14,22 +14,12 @@ namespace Gestion_de_Equipos
     {
         public static string empleadoid = "CERRADO";
         public static string codigomantenimiento = "";
+        operacion oper = new operacion();
 
 
         public MenuPrincipal()
         {
             InitializeComponent();
-            Form f = new Login();
-            f.ShowDialog();
-
-            if(empleadoid == "CERRADO") //Validar que se halla iniciado sesion...
-            {
-                this.Close();
-            }
-            else
-            {
-                //Continuar
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,7 +30,17 @@ namespace Gestion_de_Equipos
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            Form f = new Login();
+            f.ShowDialog();
 
+            if (empleadoid == "CERRADO") //Validar que se halla iniciado sesion...
+            {
+                this.Close();
+            }
+            else
+            {
+                //Continuar
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -87,13 +87,30 @@ namespace Gestion_de_Equipos
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form f = new Login();
-            f.ShowDialog();
             empleadoid = "CERRADO";
+            f.ShowDialog();
+
+            if (empleadoid == "CERRADO") //Validar que se halla iniciado sesion...
+            {
+                this.Close();
+            }
+            else
+            {
+                //Continuar
+            }
         }
 
         private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            bool SalirDelSistema = oper.CajaDeMensaje("salir del Sistema","Salir");
+            if (SalirDelSistema)
+            {
+                this.Close();
+            }
+            else
+            {
+                //Quedarse en el sistema
+            }
         }
     }
 }
