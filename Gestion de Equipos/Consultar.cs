@@ -17,6 +17,7 @@ namespace Gestion_de_Equipos
         string nombretabla = "";
         public static bool Seleccionando = false;
         public static int SeleccionandoIndex = 0;
+        public static string criterio = "";
 
         public Consultar()
         {

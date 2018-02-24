@@ -59,7 +59,7 @@ namespace Gestion_de_Equipos
 
                         DateTime targetdate = dtfechatarget.Value;
                         string fechatarget = oper.FormatearFecha(targetdate);
-                        fechatarget += " " + dtfechatarget.Text;
+                        fechatarget += " " + dtfechatarget.Value.Hour.ToString() + ":" + dtfechatarget.Value.Minute.ToString() + ":" + dtfechatarget.Value.Second.ToString();
 
                         //Insertar la Reserva en procesos
                         oper.QuerySqlLibre("INSERT INTO procesos (idequipo, estado, idparticipante, idempleado, fecha) " +
@@ -68,7 +68,7 @@ namespace Gestion_de_Equipos
                         //Actualizar el estado del equipo seleccionado
                         oper.QuerySqlLibre("UPDATE equipos SET estado = 'RESERVADO' WHERE id = '" + txtidequipo.Text + "';");
                         MessageBox.Show("El equipo fue reservado satisfactoriamente...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        NuevoReserva();
+                        NuevaReserva();
                     }
                 }
                 else
@@ -87,7 +87,7 @@ namespace Gestion_de_Equipos
             this.Close();
         }
 
-        public void NuevoReserva()
+        public void NuevaReserva()
         {
             txtparticipantematricula.Clear();
             txtidequipo.Text = "0";
@@ -101,6 +101,24 @@ namespace Gestion_de_Equipos
         {
             dtfechatarget.Value = DateTime.Now;
             dtfechatarget.Text = "08:00:00";
+        }
+
+        private void btnselectpart_Click(object sender, EventArgs e)
+        {
+            Form f = new Consultar();
+            Consultar.Seleccionando = true;
+            Consultar.SeleccionandoIndex = 0;
+            f.ShowDialog();
+            if (MenuPrincipal.idseleccionar != "0")
+            {
+                //Cargar nombre e id
+                DataSet ds = oper.DataSetConsulta("SELECT matricula FROM participantes WHERE id = '" + MenuPrincipal.idseleccionar + "'");
+                txtparticipantematricula.Text = ds.Tables[0].Rows[0][0].ToString();
+            }
+            else
+            {
+                //No hacer nada
+            }
         }
     }
 }

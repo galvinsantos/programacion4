@@ -15,6 +15,7 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
     public partial class Login : Form
     {
         operacion oper = new operacion();
+        public bool preguntarsalir = true;
 
         public Login()
         {
@@ -81,6 +82,32 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MenuPrincipal.usuarioempleado == "CERRADO")
+            {
+                if (preguntarsalir)
+                {
+                    preguntarsalir = false;
+                    bool SalirDelSistema = oper.CajaDeMensaje("Salir del Sistema", "Salir");
+                    if (SalirDelSistema)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        //Quedarse en el sistema
+                        e.Cancel = true;
+                        preguntarsalir = true;
+                    }
+                }
+                else { }
+            }
+            {
+                //Continue With the login
+            }
         }
     }
 }

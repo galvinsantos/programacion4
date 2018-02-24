@@ -41,6 +41,7 @@
             this.txtidequipo = new System.Windows.Forms.TextBox();
             this.Aula = new System.Windows.Forms.Label();
             this.txtaula = new System.Windows.Forms.TextBox();
+            this.btnselectpart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnreservar
@@ -80,11 +81,13 @@
             // txtparticipantematricula
             // 
             this.txtparticipantematricula.BackColor = System.Drawing.Color.White;
+            this.txtparticipantematricula.Enabled = false;
             this.txtparticipantematricula.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtparticipantematricula.Location = new System.Drawing.Point(262, 59);
+            this.txtparticipantematricula.Location = new System.Drawing.Point(241, 66);
             this.txtparticipantematricula.MaxLength = 10;
             this.txtparticipantematricula.Name = "txtparticipantematricula";
-            this.txtparticipantematricula.Size = new System.Drawing.Size(166, 29);
+            this.txtparticipantematricula.ReadOnly = true;
+            this.txtparticipantematricula.Size = new System.Drawing.Size(114, 29);
             this.txtparticipantematricula.TabIndex = 81;
             this.txtparticipantematricula.Text = "14-3679";
             // 
@@ -92,7 +95,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 59);
+            this.label1.Location = new System.Drawing.Point(13, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(222, 26);
             this.label1.TabIndex = 78;
@@ -143,7 +146,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Bisque;
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(361, 145);
             this.button1.Name = "button1";
@@ -184,10 +187,21 @@
             this.txtaula.Location = new System.Drawing.Point(262, 191);
             this.txtaula.MaxLength = 20;
             this.txtaula.Name = "txtaula";
-            this.txtaula.ReadOnly = true;
             this.txtaula.Size = new System.Drawing.Size(166, 29);
             this.txtaula.TabIndex = 81;
             this.txtaula.Text = "1-D-503";
+            // 
+            // btnselectpart
+            // 
+            this.btnselectpart.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnselectpart.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnselectpart.Location = new System.Drawing.Point(361, 61);
+            this.btnselectpart.Name = "btnselectpart";
+            this.btnselectpart.Size = new System.Drawing.Size(148, 38);
+            this.btnselectpart.TabIndex = 80;
+            this.btnselectpart.Text = "Seleccionar";
+            this.btnselectpart.UseVisualStyleBackColor = false;
+            this.btnselectpart.Click += new System.EventHandler(this.btnselectpart_Click);
             // 
             // reservar
             // 
@@ -203,6 +217,7 @@
             this.Controls.Add(this.Aula);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnselectpart);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnreservar);
             this.Controls.Add(this.label1);
@@ -235,5 +250,6 @@
         private System.Windows.Forms.TextBox txtidequipo;
         private System.Windows.Forms.Label Aula;
         private System.Windows.Forms.TextBox txtaula;
+        private System.Windows.Forms.Button btnselectpart;
     }
 }
