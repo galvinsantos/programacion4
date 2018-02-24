@@ -88,7 +88,7 @@ namespace Gestion_de_Equipos
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 dgvequipos.Rows.Add();
-                for (int k = 0; k < 4; k++)
+                for (int k = 0; k < 5; k++)
                 {
                     dgvequipos.Rows[i].Cells[k].Value = ds.Tables[0].Rows[i][k].ToString();
                 }
@@ -180,6 +180,11 @@ namespace Gestion_de_Equipos
                     e.Handled = true;
                 }
             }
+        }
+
+        private void cbtipobusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MostrarTodo();
         }
     }
 }

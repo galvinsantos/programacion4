@@ -32,14 +32,14 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.dgvequipos = new System.Windows.Forms.DataGridView();
-            this.lbltitulo = new System.Windows.Forms.Label();
-            this.cbtipobusqueda = new System.Windows.Forms.ComboBox();
-            this.btnmostrartodo = new System.Windows.Forms.Button();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.carrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbltitulo = new System.Windows.Forms.Label();
+            this.cbtipobusqueda = new System.Windows.Forms.ComboBox();
+            this.btnmostrartodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvequipos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,42 +101,6 @@
             this.dgvequipos.TabIndex = 78;
             this.dgvequipos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvequipos_CellDoubleClick);
             // 
-            // lbltitulo
-            // 
-            this.lbltitulo.AutoSize = true;
-            this.lbltitulo.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.Location = new System.Drawing.Point(9, 10);
-            this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(118, 32);
-            this.lbltitulo.TabIndex = 80;
-            this.lbltitulo.Text = "Consultar";
-            // 
-            // cbtipobusqueda
-            // 
-            this.cbtipobusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbtipobusqueda.FormattingEnabled = true;
-            this.cbtipobusqueda.Items.AddRange(new object[] {
-            "Participante",
-            "Empleados",
-            "Equipos"});
-            this.cbtipobusqueda.Location = new System.Drawing.Point(129, 18);
-            this.cbtipobusqueda.Name = "cbtipobusqueda";
-            this.cbtipobusqueda.Size = new System.Drawing.Size(110, 21);
-            this.cbtipobusqueda.TabIndex = 83;
-            this.cbtipobusqueda.TextChanged += new System.EventHandler(this.cbtipobusqueda_TextChanged);
-            // 
-            // btnmostrartodo
-            // 
-            this.btnmostrartodo.BackColor = System.Drawing.Color.White;
-            this.btnmostrartodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmostrartodo.Location = new System.Drawing.Point(12, 383);
-            this.btnmostrartodo.Name = "btnmostrartodo";
-            this.btnmostrartodo.Size = new System.Drawing.Size(686, 38);
-            this.btnmostrartodo.TabIndex = 77;
-            this.btnmostrartodo.Text = "Mostrar Todos";
-            this.btnmostrartodo.UseVisualStyleBackColor = false;
-            this.btnmostrartodo.Click += new System.EventHandler(this.btnmostrartodo_Click);
-            // 
             // codigo
             // 
             this.codigo.HeaderText = "Código";
@@ -170,6 +134,43 @@
             this.direccion.Name = "direccion";
             this.direccion.ReadOnly = true;
             this.direccion.Width = 180;
+            // 
+            // lbltitulo
+            // 
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.Location = new System.Drawing.Point(9, 10);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(118, 32);
+            this.lbltitulo.TabIndex = 80;
+            this.lbltitulo.Text = "Consultar";
+            // 
+            // cbtipobusqueda
+            // 
+            this.cbtipobusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtipobusqueda.FormattingEnabled = true;
+            this.cbtipobusqueda.Items.AddRange(new object[] {
+            "Participante",
+            "Empleados",
+            "Equipos"});
+            this.cbtipobusqueda.Location = new System.Drawing.Point(129, 18);
+            this.cbtipobusqueda.Name = "cbtipobusqueda";
+            this.cbtipobusqueda.Size = new System.Drawing.Size(110, 21);
+            this.cbtipobusqueda.TabIndex = 83;
+            this.cbtipobusqueda.SelectedIndexChanged += new System.EventHandler(this.cbtipobusqueda_SelectedIndexChanged);
+            this.cbtipobusqueda.TextChanged += new System.EventHandler(this.cbtipobusqueda_TextChanged);
+            // 
+            // btnmostrartodo
+            // 
+            this.btnmostrartodo.BackColor = System.Drawing.Color.White;
+            this.btnmostrartodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmostrartodo.Location = new System.Drawing.Point(12, 383);
+            this.btnmostrartodo.Name = "btnmostrartodo";
+            this.btnmostrartodo.Size = new System.Drawing.Size(686, 38);
+            this.btnmostrartodo.TabIndex = 77;
+            this.btnmostrartodo.Text = "Mostrar Todos";
+            this.btnmostrartodo.UseVisualStyleBackColor = false;
+            this.btnmostrartodo.Click += new System.EventHandler(this.btnmostrartodo_Click);
             // 
             // Consultar
             // 

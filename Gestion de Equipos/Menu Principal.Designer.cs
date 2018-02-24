@@ -43,7 +43,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnmantenimientos = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -181,17 +181,17 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Galvin Santos y Jeffry Marte ©";
             // 
-            // button3
+            // btnmantenimientos
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(26, 247);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(293, 88);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Mantenimientos";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button2_Click);
+            this.btnmantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmantenimientos.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmantenimientos.Location = new System.Drawing.Point(26, 247);
+            this.btnmantenimientos.Name = "btnmantenimientos";
+            this.btnmantenimientos.Size = new System.Drawing.Size(293, 88);
+            this.btnmantenimientos.TabIndex = 2;
+            this.btnmantenimientos.Text = "Mantenimientos";
+            this.btnmantenimientos.UseVisualStyleBackColor = true;
+            this.btnmantenimientos.Click += new System.EventHandler(this.btnmantenimientos_Click);
             // 
             // MenuPrincipal
             // 
@@ -199,7 +199,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 606);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnmantenimientos);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -235,6 +235,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnmantenimientos;
     }
 }

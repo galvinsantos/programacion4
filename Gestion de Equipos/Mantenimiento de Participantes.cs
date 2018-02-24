@@ -12,6 +12,8 @@ namespace Gestion_de_Equipos
 {
     public partial class Mantenimiento_de_Participantes : Form
     {
+        operacion oper = new operacion();
+
         public static bool modificar = false;
 
         public Mantenimiento_de_Participantes()
@@ -32,6 +34,11 @@ namespace Gestion_de_Equipos
         public void Cargar()
         {
 
+        }
+
+        private void btnactualizarservicio_Click(object sender, EventArgs e)
+        {
+            oper.QuerySqlLibre("INSERT INTO participantes (nombre, carrera, telefono, matricula) VALUES ('" + tbpnombre.Text + "','" + tbcarrera.Text + "','" + tbtelefono.Text + "','" + tbmatricula.Text + "');");
         }
     }
 }

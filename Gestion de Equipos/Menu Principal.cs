@@ -30,17 +30,17 @@ namespace Gestion_de_Equipos
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            Form f = new Login();
-            f.ShowDialog();
+            //Form f = new Login();
+            //f.ShowDialog();
 
-            if (empleadoid == "CERRADO") //Validar que se halla iniciado sesion...
-            {
-                this.Close();
-            }
-            else
-            {
-                //Continuar
-            }
+            //if (empleadoid == "CERRADO") //Validar que se halla iniciado sesion...
+            //{
+            //    this.Close();
+            //}
+            //else
+            //{
+            //    //Continuar
+            //}
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -111,6 +111,13 @@ namespace Gestion_de_Equipos
             {
                 //Quedarse en el sistema
             }
+        }
+
+        private void btnmantenimientos_Click(object sender, EventArgs e)
+        {
+            Form f = new Mantenimientos();
+            f.ShowDialog();
+
         }
     }
 }

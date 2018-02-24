@@ -32,16 +32,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btpdelete = new System.Windows.Forms.Button();
             this.btnactualizarservicio = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbcarrera = new System.Windows.Forms.TextBox();
             this.lblmarca = new System.Windows.Forms.Label();
-            this.tbpprecio = new System.Windows.Forms.TextBox();
+            this.tbtelefono = new System.Windows.Forms.TextBox();
             this.lblestado = new System.Windows.Forms.Label();
             this.tbpnombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbpcodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbmatricula = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btpnew
@@ -84,14 +84,15 @@
             this.btnactualizarservicio.TabIndex = 92;
             this.btnactualizarservicio.Text = "Guardar";
             this.btnactualizarservicio.UseVisualStyleBackColor = true;
+            this.btnactualizarservicio.Click += new System.EventHandler(this.btnactualizarservicio_Click);
             // 
-            // textBox1
+            // tbcarrera
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox1.Location = new System.Drawing.Point(147, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 23);
-            this.textBox1.TabIndex = 89;
+            this.tbcarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.tbcarrera.Location = new System.Drawing.Point(147, 107);
+            this.tbcarrera.Name = "tbcarrera";
+            this.tbcarrera.Size = new System.Drawing.Size(194, 23);
+            this.tbcarrera.TabIndex = 89;
             // 
             // lblmarca
             // 
@@ -103,13 +104,13 @@
             this.lblmarca.TabIndex = 97;
             this.lblmarca.Text = "Carrera";
             // 
-            // tbpprecio
+            // tbtelefono
             // 
-            this.tbpprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbpprecio.Location = new System.Drawing.Point(148, 138);
-            this.tbpprecio.Name = "tbpprecio";
-            this.tbpprecio.Size = new System.Drawing.Size(150, 23);
-            this.tbpprecio.TabIndex = 90;
+            this.tbtelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.tbtelefono.Location = new System.Drawing.Point(148, 138);
+            this.tbtelefono.Name = "tbtelefono";
+            this.tbtelefono.Size = new System.Drawing.Size(150, 23);
+            this.tbtelefono.TabIndex = 90;
             // 
             // lblestado
             // 
@@ -166,15 +167,15 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 24);
             this.label3.TabIndex = 98;
-            this.label3.Text = "Dirección";
+            this.label3.Text = "Matrícula";
             // 
-            // textBox2
+            // tbmatricula
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox2.Location = new System.Drawing.Point(148, 167);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 23);
-            this.textBox2.TabIndex = 90;
+            this.tbmatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.tbmatricula.Location = new System.Drawing.Point(148, 167);
+            this.tbmatricula.Name = "tbmatricula";
+            this.tbmatricula.Size = new System.Drawing.Size(150, 23);
+            this.tbmatricula.TabIndex = 90;
             // 
             // Mantenimiento_de_Participantes
             // 
@@ -185,11 +186,11 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btpdelete);
             this.Controls.Add(this.btnactualizarservicio);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbcarrera);
             this.Controls.Add(this.lblmarca);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbmatricula);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbpprecio);
+            this.Controls.Add(this.tbtelefono);
             this.Controls.Add(this.lblestado);
             this.Controls.Add(this.tbpnombre);
             this.Controls.Add(this.label2);
@@ -210,15 +211,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btpdelete;
         private System.Windows.Forms.Button btnactualizarservicio;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbcarrera;
         private System.Windows.Forms.Label lblmarca;
-        private System.Windows.Forms.TextBox tbpprecio;
+        private System.Windows.Forms.TextBox tbtelefono;
         private System.Windows.Forms.Label lblestado;
         private System.Windows.Forms.TextBox tbpnombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbpcodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbmatricula;
     }
 }
