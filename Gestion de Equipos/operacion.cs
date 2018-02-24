@@ -16,12 +16,11 @@ namespace Gestion_de_Equipos
         {
             SqlConnection con = new SqlConnection("Data Source="+Environment.MachineName+"\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
             string strsql;
-            strsql = "insert into clientes(codigo, nombre, cedula, telefono, direccion) values(@codigo, @nombre, @cedula, @telefono, @direccion)";
+            strsql = "insert into clientes(nombre, cedula, telefono, direccion) values(@nombre, @cedula, @telefono, @direccion)";
             SqlCommand cmd = new SqlCommand(strsql, con);
 
             con.Open();
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@codigo", codigo);
             cmd.Parameters.AddWithValue("@nombre", nombre);
             cmd.Parameters.AddWithValue("@cedula", cedula);
             cmd.Parameters.AddWithValue("@telefono", telefono);
