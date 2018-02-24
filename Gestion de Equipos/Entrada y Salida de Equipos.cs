@@ -95,18 +95,19 @@ namespace Gestion_de_Equipos
                 "INNER JOIN equipos ON procesos.idequipo = equipos.id " +
                 "INNER JOIN participantes ON procesos.idparticipante = participantes.id " +
                 "INNER JOIN empleados ON procesos.idempleado = empleados.id " +
-                "WHERE "+ criterio +" LIKE '%" + tbbuscar.Text + "%';;");
+                "WHERE " + criterio + " LIKE '%" + tbbuscar.Text + "%';;");
+
             dgvequipos.Rows.Clear();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 dgvequipos.Rows.Add();
-                for (int k = 0; k < 6; k++)
+                for (int k = 0; k < 7; k++)
                 {
                     dgvequipos.Rows[i].Cells[k].Value = ds.Tables[0].Rows[i][k].ToString();
                 }
-
             }
-            
+            dgvequipos.Refresh();
+
         }
 
         private void btnmostrartodo_Click(object sender, EventArgs e)
@@ -116,7 +117,7 @@ namespace Gestion_de_Equipos
 
         public void MostrarTodos()
         {
-            DataSet ds = oper.DataSetConsulta("SELECT procesos.id, equipos.nombre, procesos.estado, participantes.nombre, empleados.nombre,procesos.aula, procesos.fecha FROM procesos INNER JOIN equipos ON procesos.idequipo = equipos.id INNER JOIN participantes ON procesos.idparticipante = participantes.id INNER JOIN empleados ON procesos.idempleado = empleados.id;"); 
+            DataSet ds = oper.DataSetConsulta("SELECT procesos.id, equipos.nombre, procesos.estado, participantes.nombre, empleados.nombre,procesos.aula, procesos.fecha FROM procesos INNER JOIN equipos ON procesos.idequipo = equipos.id INNER JOIN participantes ON procesos.idparticipante = participantes.id INNER JOIN empleados ON procesos.idempleado = empleados.id;");
             dgvequipos.Rows.Clear();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
@@ -133,7 +134,7 @@ namespace Gestion_de_Equipos
         {
             Form f = new EntradaSalida();
             f.ShowDialog();
-            if(MenuPrincipal.DarSalidaDarEntrada != 0)
+            if (MenuPrincipal.DarSalidaDarEntrada != 0 && dgvequipos.SelectedRows.Count == 1)
             {
                 ProcesarEquipo(MenuPrincipal.DarSalidaDarEntrada);
             }
@@ -143,15 +144,49 @@ namespace Gestion_de_Equipos
         public void ProcesarEquipo(int Tipo)
         {
             //Procesar dependiendo el caso
+            string idproceso = dgvequipos.CurrentRow.Cells[0].Value.ToString();
+            string estado = dgvequipos.CurrentRow.Cells[2].Value.ToString();
+            string nombreequipo = dgvequipos.CurrentRow.Cells[1].Value.ToString();
+            DataSet ds = oper.DataSetConsulta("SELECT idequipo, aula, idparticipante FROM procesos WHERE id = '" + idproceso + "';");
+
+            string idequipo = ds.Tables[0].Rows[0][0].ToString();
+            string aula = ds.Tables[0].Rows[0][1].ToString();
+            string idparticipante = ds.Tables[0].Rows[0][2].ToString();
+
+            if (estado == "FINALIZADO" && Tipo != 3)
+            {
+                MessageBox.Show("Este proceso ya fue finalizado...", "Proceso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                //Continue
+            }
+
             if (Tipo == 1) //Dar Entrada cambiar a DISPONIBLE
             {
-
+                bool DarEntrada = oper.CajaDeMensaje("Le va a dar entrada al equipo: " + nombreequipo, "Dar Entrada");
+                if (DarEntrada)
+                {
+                    oper.QuerySqlLibre("UPDATE procesos SET estado = 'FINALIZADO' WHERE id = '" + idproceso + "';");
+                    oper.QuerySqlLibre("UPDATE equipos SET estado = 'DISPONIBLE', ubicacion = 'ALMACEN', participante = '' WHERE id = '" + idequipo + "';");
+                }
+                else { }
             }
             else
             {
                 if (Tipo == 2) //Dar Salida Entregar al Participante
                 {
 
+                    ds = oper.DataSetConsulta("SELECT matricula FROM participantes WHERE id = '" + idparticipante + "';");
+                    string matriculaparticipante = ds.Tables[0].Rows[0][0].ToString();
+                    bool DarSalida = oper.CajaDeMensaje("Le va a dar Salida al equipo: " + nombreequipo, "Dar Entrada");
+                    if (DarSalida)
+                    {
+                        oper.QuerySqlLibre("UPDATE procesos SET estado = 'ENTREGADO' WHERE id = '" + idproceso + "';");
+                        oper.QuerySqlLibre("UPDATE equipos SET estado = 'ENTREGADO', ubicacion = '" + aula + "', participante = '" + matriculaparticipante + "' WHERE id = '" + idequipo + "';");
+                    }
+                    else { }
                 }
                 else //Por defecto Reservar, abrir formulario de reserva
                 {
@@ -159,14 +194,15 @@ namespace Gestion_de_Equipos
                     f.ShowDialog();
                 }
             }
+            Buscar();
         }
 
         private void tbbuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == 13)
+            if (e.KeyChar == 13)
             {
                 e.Handled = true;
-            }        
+            }
         }
 
         private void tbbuscar_KeyUp(object sender, KeyEventArgs e)

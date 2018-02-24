@@ -1,0 +1,2 @@
+﻿DELETE FROM procesos;
+DBCC CHECKIDENT (procesos, RESEED,0);

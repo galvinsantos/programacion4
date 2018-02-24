@@ -95,7 +95,7 @@ namespace Gestion_de_Equipos
             modificar = true;
             btnagregar.Text = "MODIFICAR";
             DataSet ds = oper.DataSetConsulta("SELECT * FROM login WHERE usuario = '"+ idmodificar +"';");
-            txtempleado.Text = CargarEmpleado(MenuPrincipal.idseleccionar);
+            txtempleado.Text = CargarEmpleado(dgvequipos.CurrentRow.Cells[2].Value.ToString());
             txtidempleado.Text = ds.Tables[0].Rows[0][2].ToString();
             txtusuario.Text = ds.Tables[0].Rows[0][0].ToString();
             txtcontraseña.Text = "*******";
