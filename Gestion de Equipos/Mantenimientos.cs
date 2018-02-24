@@ -12,9 +12,39 @@ namespace Gestion_de_Equipos
 {
     public partial class Mantenimientos : Form
     {
+        operacion oper = new operacion();
+
+        public static bool modificar = false;
+
         public Mantenimientos()
         {
             InitializeComponent();
         }
+
+        private void btnactualizarservicio_Click(object sender, EventArgs e)
+        {
+            oper.QuerySqlLibre("INSERT INTO equipos (nombre, estado, ubicacion, participante) VALUES ('" + txtnombreequipo.Text + "','" + txtestadoequipo.Text + "','" + txtubicacionequipo.Text + "','" + txtparticipanteequipo.Text + "');");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            oper.QuerySqlLibre("INSERT INTO participantes (nombre, carrera, telefono, matricula) VALUES ('" + txtnombrepart.Text + "','" + txtcarrera.Text + "','" + txttelefonopar.Text + "','" + txtmatricula.Text + "');");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            oper.QuerySqlLibre("INSERT INTO empleados (nombre, ceduña, telefono, dirreccion) VALUES ('" + txtnombre.Text + "','" + txtcedula.Text + "','" + txttelefono.Text + "','" + txtdireccion.Text + "');");
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Mantenimientos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }

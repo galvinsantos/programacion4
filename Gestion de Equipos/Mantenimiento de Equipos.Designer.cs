@@ -53,6 +53,7 @@
             this.btpnew.TabIndex = 67;
             this.btpnew.Text = "Nuevo";
             this.btpnew.UseVisualStyleBackColor = true;
+            this.btpnew.Click += new System.EventHandler(this.btpnew_Click);
             // 
             // label8
             // 
@@ -74,6 +75,7 @@
             this.btpdelete.TabIndex = 66;
             this.btpdelete.Text = "Eliminar";
             this.btpdelete.UseVisualStyleBackColor = true;
+            this.btpdelete.Click += new System.EventHandler(this.btpdelete_Click);
             // 
             // btnactualizarservicio
             // 

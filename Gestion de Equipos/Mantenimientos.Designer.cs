@@ -30,32 +30,32 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btpnew = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btpdelete = new System.Windows.Forms.Button();
             this.btnactualizarservicio = new System.Windows.Forms.Button();
-            this.tbdias = new System.Windows.Forms.TextBox();
+            this.txtparticipanteequipo = new System.Windows.Forms.TextBox();
             this.lblparticipante = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtubicacionequipo = new System.Windows.Forms.TextBox();
             this.lblmarca = new System.Windows.Forms.Label();
-            this.tbpprecio = new System.Windows.Forms.TextBox();
+            this.txtestadoequipo = new System.Windows.Forms.TextBox();
             this.lblestado = new System.Windows.Forms.Label();
-            this.tbpnombre = new System.Windows.Forms.TextBox();
+            this.txtnombreequipo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbpcodigo = new System.Windows.Forms.TextBox();
+            this.txtcodigoequipo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtcarrera = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtmatricula = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txttelefonopar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtnombrepart = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -97,15 +97,15 @@
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.btpdelete);
             this.tabPage1.Controls.Add(this.btnactualizarservicio);
-            this.tabPage1.Controls.Add(this.tbdias);
+            this.tabPage1.Controls.Add(this.txtparticipanteequipo);
             this.tabPage1.Controls.Add(this.lblparticipante);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtubicacionequipo);
             this.tabPage1.Controls.Add(this.lblmarca);
-            this.tabPage1.Controls.Add(this.tbpprecio);
+            this.tabPage1.Controls.Add(this.txtestadoequipo);
             this.tabPage1.Controls.Add(this.lblestado);
-            this.tabPage1.Controls.Add(this.tbpnombre);
+            this.tabPage1.Controls.Add(this.txtnombreequipo);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.tbpcodigo);
+            this.tabPage1.Controls.Add(this.txtcodigoequipo);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -114,30 +114,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento de Equipos";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.textBox3);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.textBox5);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(710, 331);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Mantenimiento de Participantes";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btpnew
             // 
@@ -179,14 +156,15 @@
             this.btnactualizarservicio.TabIndex = 78;
             this.btnactualizarservicio.Text = "Guardar";
             this.btnactualizarservicio.UseVisualStyleBackColor = true;
+            this.btnactualizarservicio.Click += new System.EventHandler(this.btnactualizarservicio_Click);
             // 
-            // tbdias
+            // txtparticipanteequipo
             // 
-            this.tbdias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbdias.Location = new System.Drawing.Point(306, 195);
-            this.tbdias.Name = "tbdias";
-            this.tbdias.Size = new System.Drawing.Size(112, 23);
-            this.tbdias.TabIndex = 77;
+            this.txtparticipanteequipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtparticipanteequipo.Location = new System.Drawing.Point(306, 195);
+            this.txtparticipanteequipo.Name = "txtparticipanteequipo";
+            this.txtparticipanteequipo.Size = new System.Drawing.Size(112, 23);
+            this.txtparticipanteequipo.TabIndex = 77;
             // 
             // lblparticipante
             // 
@@ -198,13 +176,13 @@
             this.lblparticipante.TabIndex = 85;
             this.lblparticipante.Text = "Participante";
             // 
-            // textBox1
+            // txtubicacionequipo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox1.Location = new System.Drawing.Point(306, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 23);
-            this.textBox1.TabIndex = 75;
+            this.txtubicacionequipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtubicacionequipo.Location = new System.Drawing.Point(306, 166);
+            this.txtubicacionequipo.Name = "txtubicacionequipo";
+            this.txtubicacionequipo.Size = new System.Drawing.Size(194, 23);
+            this.txtubicacionequipo.TabIndex = 75;
             // 
             // lblmarca
             // 
@@ -216,13 +194,13 @@
             this.lblmarca.TabIndex = 83;
             this.lblmarca.Text = "Ubicación";
             // 
-            // tbpprecio
+            // txtestadoequipo
             // 
-            this.tbpprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbpprecio.Location = new System.Drawing.Point(305, 135);
-            this.tbpprecio.Name = "tbpprecio";
-            this.tbpprecio.Size = new System.Drawing.Size(112, 23);
-            this.tbpprecio.TabIndex = 76;
+            this.txtestadoequipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtestadoequipo.Location = new System.Drawing.Point(305, 135);
+            this.txtestadoequipo.Name = "txtestadoequipo";
+            this.txtestadoequipo.Size = new System.Drawing.Size(112, 23);
+            this.txtestadoequipo.TabIndex = 76;
             // 
             // lblestado
             // 
@@ -234,13 +212,13 @@
             this.lblestado.TabIndex = 84;
             this.lblestado.Text = "Estado";
             // 
-            // tbpnombre
+            // txtnombreequipo
             // 
-            this.tbpnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbpnombre.Location = new System.Drawing.Point(305, 104);
-            this.tbpnombre.Name = "tbpnombre";
-            this.tbpnombre.Size = new System.Drawing.Size(238, 23);
-            this.tbpnombre.TabIndex = 74;
+            this.txtnombreequipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtnombreequipo.Location = new System.Drawing.Point(305, 104);
+            this.txtnombreequipo.Name = "txtnombreequipo";
+            this.txtnombreequipo.Size = new System.Drawing.Size(238, 23);
+            this.txtnombreequipo.TabIndex = 74;
             // 
             // label2
             // 
@@ -252,14 +230,14 @@
             this.label2.TabIndex = 82;
             this.label2.Text = "Nombre";
             // 
-            // tbpcodigo
+            // txtcodigoequipo
             // 
-            this.tbpcodigo.Enabled = false;
-            this.tbpcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbpcodigo.Location = new System.Drawing.Point(305, 72);
-            this.tbpcodigo.Name = "tbpcodigo";
-            this.tbpcodigo.Size = new System.Drawing.Size(90, 23);
-            this.tbpcodigo.TabIndex = 73;
+            this.txtcodigoequipo.Enabled = false;
+            this.txtcodigoequipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtcodigoequipo.Location = new System.Drawing.Point(305, 72);
+            this.txtcodigoequipo.Name = "txtcodigoequipo";
+            this.txtcodigoequipo.Size = new System.Drawing.Size(90, 23);
+            this.txtcodigoequipo.TabIndex = 73;
             // 
             // label1
             // 
@@ -270,6 +248,30 @@
             this.label1.Size = new System.Drawing.Size(79, 24);
             this.label1.TabIndex = 81;
             this.label1.Text = "Código";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.txtcarrera);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.txtmatricula);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.txttelefonopar);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.txtnombrepart);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.textBox6);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(710, 331);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Mantenimiento de Participantes";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -311,14 +313,15 @@
             this.button3.TabIndex = 106;
             this.button3.Text = "Guardar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox2
+            // txtcarrera
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox2.Location = new System.Drawing.Point(295, 130);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 23);
-            this.textBox2.TabIndex = 103;
+            this.txtcarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtcarrera.Location = new System.Drawing.Point(295, 130);
+            this.txtcarrera.Name = "txtcarrera";
+            this.txtcarrera.Size = new System.Drawing.Size(194, 23);
+            this.txtcarrera.TabIndex = 103;
             // 
             // label4
             // 
@@ -330,13 +333,13 @@
             this.label4.TabIndex = 111;
             this.label4.Text = "Carrera";
             // 
-            // textBox3
+            // txtmatricula
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox3.Location = new System.Drawing.Point(296, 190);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 23);
-            this.textBox3.TabIndex = 104;
+            this.txtmatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtmatricula.Location = new System.Drawing.Point(296, 190);
+            this.txtmatricula.Name = "txtmatricula";
+            this.txtmatricula.Size = new System.Drawing.Size(150, 23);
+            this.txtmatricula.TabIndex = 104;
             // 
             // label5
             // 
@@ -346,15 +349,15 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 24);
             this.label5.TabIndex = 112;
-            this.label5.Text = "Dirección";
+            this.label5.Text = "Matricula";
             // 
-            // textBox4
+            // txttelefonopar
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox4.Location = new System.Drawing.Point(296, 161);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 23);
-            this.textBox4.TabIndex = 105;
+            this.txttelefonopar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txttelefonopar.Location = new System.Drawing.Point(296, 161);
+            this.txttelefonopar.Name = "txttelefonopar";
+            this.txttelefonopar.Size = new System.Drawing.Size(150, 23);
+            this.txttelefonopar.TabIndex = 105;
             // 
             // label6
             // 
@@ -366,13 +369,13 @@
             this.label6.TabIndex = 113;
             this.label6.Text = "Teléfono";
             // 
-            // textBox5
+            // txtnombrepart
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox5.Location = new System.Drawing.Point(295, 101);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(238, 23);
-            this.textBox5.TabIndex = 102;
+            this.txtnombrepart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txtnombrepart.Location = new System.Drawing.Point(295, 101);
+            this.txtnombrepart.Name = "txtnombrepart";
+            this.txtnombrepart.Size = new System.Drawing.Size(238, 23);
+            this.txtnombrepart.TabIndex = 102;
             // 
             // label7
             // 
@@ -466,6 +469,7 @@
             this.button6.TabIndex = 92;
             this.button6.Text = "Guardar";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // txtdireccion
             // 
@@ -566,6 +570,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Mantenimientos";
             this.Text = "Mantenimientos";
+            this.Load += new System.EventHandler(this.Mantenimientos_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -586,27 +591,27 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btpdelete;
         private System.Windows.Forms.Button btnactualizarservicio;
-        private System.Windows.Forms.TextBox tbdias;
+        private System.Windows.Forms.TextBox txtparticipanteequipo;
         private System.Windows.Forms.Label lblparticipante;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtubicacionequipo;
         private System.Windows.Forms.Label lblmarca;
-        private System.Windows.Forms.TextBox tbpprecio;
+        private System.Windows.Forms.TextBox txtestadoequipo;
         private System.Windows.Forms.Label lblestado;
-        private System.Windows.Forms.TextBox tbpnombre;
+        private System.Windows.Forms.TextBox txtnombreequipo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbpcodigo;
+        private System.Windows.Forms.TextBox txtcodigoequipo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtcarrera;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtmatricula;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txttelefonopar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtnombrepart;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
