@@ -58,7 +58,55 @@ namespace Gestion_de_Equipos
 
         public void Buscar()
         {
+            string criterio = "";
+            //Criterio
+            if (cbtipobusqueda.SelectedIndex == 0)
+            {
+                criterio = "procesos.id";
+            }
+            else
+            {
+                if (cbtipobusqueda.SelectedIndex == 1)
+                {
+                    criterio = "equipos.nombre";
+                }
+                else
+                {
+                    if (cbtipobusqueda.SelectedIndex == 2)
+                    {
+                        criterio = "procesos.estado";
+                    }
+                    else
+                    {
+                        if (cbtipobusqueda.SelectedIndex == 3)
+                        {
+                            criterio = "participantes.nombre";
+                        }
+                        else
+                        {
+                            criterio = "empleados.nombre";
+                        }
+                    }
+                }
+            }
 
+            DataSet ds = oper.DataSetConsulta("SELECT procesos.id, equipos.nombre, procesos.estado, " +
+                "participantes.nombre, empleados.nombre, procesos.fecha FROM procesos " +
+                "INNER JOIN equipos ON procesos.idequipo = equipos.id " +
+                "INNER JOIN participantes ON procesos.idparticipante = participantes.id " +
+                "INNER JOIN empleados ON procesos.idempleado = empleados.id " +
+                "WHERE "+ criterio +" LIKE '%" + tbbuscar.Text + "%';;");
+            dgvequipos.Rows.Clear();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                dgvequipos.Rows.Add();
+                for (int k = 0; k < 6; k++)
+                {
+                    dgvequipos.Rows[i].Cells[k].Value = ds.Tables[0].Rows[i][k].ToString();
+                }
+
+            }
+            
         }
 
         private void btnmostrartodo_Click(object sender, EventArgs e)
@@ -85,6 +133,15 @@ namespace Gestion_de_Equipos
         {
             Form f = new EntradaSalida();
             f.ShowDialog();
+        }
+
+        private void tbbuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                e.Handled = true;
+            }
+            Buscar();
         }
     }
 }
