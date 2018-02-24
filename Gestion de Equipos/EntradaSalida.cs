@@ -19,14 +19,25 @@ namespace Gestion_de_Equipos
 
         private void btnentrada_Click(object sender, EventArgs e)
         {
-            //MenuPrincipal.TipoProceso = 1;
+            MenuPrincipal.DarSalidaDarEntrada = 1;
             this.Close();
         }
 
         private void btnsalida_Click(object sender, EventArgs e)
         {
-            //MenuPrincipal.TipoProceso = 2;
+            MenuPrincipal.DarSalidaDarEntrada = 2;
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal.DarSalidaDarEntrada = 3;
+            this.Close();
+        }
+
+        private void EntradaSalida_Load(object sender, EventArgs e)
+        {
+            MenuPrincipal.DarSalidaDarEntrada = 0;
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Gestion_de_Equipos
         public static string TipoUsuario = "";
         public static string codigomantenimiento = "";
         public static string idseleccionar = "0";
+        public static int DarSalidaDarEntrada = 0;
 
         public MenuPrincipal()
         {

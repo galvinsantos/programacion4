@@ -91,7 +91,7 @@ namespace Gestion_de_Equipos
             }
 
             DataSet ds = oper.DataSetConsulta("SELECT procesos.id, equipos.nombre, procesos.estado, " +
-                "participantes.nombre, empleados.nombre, procesos.fecha FROM procesos " +
+                "participantes.nombre, empleados.nombre, procesos.aula, procesos.fecha FROM procesos " +
                 "INNER JOIN equipos ON procesos.idequipo = equipos.id " +
                 "INNER JOIN participantes ON procesos.idparticipante = participantes.id " +
                 "INNER JOIN empleados ON procesos.idempleado = empleados.id " +
@@ -116,12 +116,12 @@ namespace Gestion_de_Equipos
 
         public void MostrarTodos()
         {
-            DataSet ds = oper.DataSetConsulta("SELECT procesos.id, equipos.nombre, procesos.estado, participantes.nombre, empleados.nombre, procesos.fecha FROM procesos INNER JOIN equipos ON procesos.idequipo = equipos.id INNER JOIN participantes ON procesos.idparticipante = participantes.id INNER JOIN empleados ON procesos.idempleado = empleados.id;"); 
+            DataSet ds = oper.DataSetConsulta("SELECT procesos.id, equipos.nombre, procesos.estado, participantes.nombre, empleados.nombre,procesos.aula, procesos.fecha FROM procesos INNER JOIN equipos ON procesos.idequipo = equipos.id INNER JOIN participantes ON procesos.idparticipante = participantes.id INNER JOIN empleados ON procesos.idempleado = empleados.id;"); 
             dgvequipos.Rows.Clear();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 dgvequipos.Rows.Add();
-                for (int k = 0; k < 6; k++)
+                for (int k = 0; k < 7; k++)
                 {
                     dgvequipos.Rows[i].Cells[k].Value = ds.Tables[0].Rows[i][k].ToString();
                 }
@@ -133,6 +133,32 @@ namespace Gestion_de_Equipos
         {
             Form f = new EntradaSalida();
             f.ShowDialog();
+            if(MenuPrincipal.DarSalidaDarEntrada != 0)
+            {
+                ProcesarEquipo(MenuPrincipal.DarSalidaDarEntrada);
+            }
+            else { }
+        }
+
+        public void ProcesarEquipo(int Tipo)
+        {
+            //Procesar dependiendo el caso
+            if (Tipo == 1) //Dar Entrada cambiar a DISPONIBLE
+            {
+
+            }
+            else
+            {
+                if (Tipo == 2) //Dar Salida Entregar al Participante
+                {
+
+                }
+                else //Por defecto Reservar, abrir formulario de reserva
+                {
+                    Form f = new reservar();
+                    f.ShowDialog();
+                }
+            }
         }
 
         private void tbbuscar_KeyPress(object sender, KeyPressEventArgs e)
@@ -140,7 +166,11 @@ namespace Gestion_de_Equipos
             if(e.KeyChar == 13)
             {
                 e.Handled = true;
-            }
+            }        
+        }
+
+        private void tbbuscar_KeyUp(object sender, KeyEventArgs e)
+        {
             Buscar();
         }
     }

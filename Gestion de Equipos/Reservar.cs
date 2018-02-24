@@ -62,8 +62,8 @@ namespace Gestion_de_Equipos
                         fechatarget += " " + dtfechatarget.Value.Hour.ToString() + ":" + dtfechatarget.Value.Minute.ToString() + ":" + dtfechatarget.Value.Second.ToString();
 
                         //Insertar la Reserva en procesos
-                        oper.QuerySqlLibre("INSERT INTO procesos (idequipo, estado, idparticipante, idempleado, fecha) " +
-                            "VALUES('" + txtidequipo.Text + "', 'RESERVADO', '" + idparticipante + "', '" + MenuPrincipal.idempleado + "', '" + fechatarget + "');");
+                        oper.QuerySqlLibre("INSERT INTO procesos (idequipo, estado, idparticipante, idempleado, aula, fecha) " +
+                            "VALUES('" + txtidequipo.Text + "', 'RESERVADO', '" + idparticipante + "', '" + MenuPrincipal.idempleado + "',  '" + txtaula.Text + "', '" + fechatarget + "');");
 
                         //Actualizar el estado del equipo seleccionado
                         oper.QuerySqlLibre("UPDATE equipos SET estado = 'RESERVADO', ubicacion = '"  + txtaula.Text + "', participante = '" + txtparticipantematricula.Text + "' WHERE id = '" + txtidequipo.Text + "';");
