@@ -39,5 +39,15 @@ namespace Gestion_de_Equipos
         {
             oper.QuerySqlLibre("INSERT INTO equipos (nombre, estado, ubicacion, participante) VALUES ('" + tbpnombre.Text + "','" + tbestado.Text + "','" + tbubicacion.Text + "','" + tbparticipante.Text + "');");
         }
+
+        private void btpdelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btpnew_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
