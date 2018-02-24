@@ -15,6 +15,8 @@ namespace Gestion_de_Equipos
         //Total 730px
         operacion oper = new operacion();
         string nombretabla = "";
+        public static bool Seleccionando = false;
+        public static int SeleccionandoIndex = 0;
 
         public Consultar()
         {
@@ -25,7 +27,14 @@ namespace Gestion_de_Equipos
         private void Consultar_Load(object sender, EventArgs e)
         {
             cbtipobusqueda.SelectedIndex = 0;
-            MostrarTodo();
+            if (Seleccionando)
+            {
+                Seleccionar();
+            }
+            else {
+                MostrarTodo();
+            }
+
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
@@ -99,25 +108,33 @@ namespace Gestion_de_Equipos
 
         private void dgvequipos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (cbtipobusqueda.Text == "Participante")
+            if (Seleccionando)
             {
-                Form f = new Mantenimiento_de_Participantes();
-                Mantenimiento_de_Participantes.modificar = true;
-                f.ShowDialog();
+                MenuPrincipal.idseleccionar = dgvequipos.CurrentRow.Cells[0].Value.ToString();
+                this.Close();
             }
             else
             {
-                if (cbtipobusqueda.Text == "Equipos")
+                if (cbtipobusqueda.Text == "Participante")
                 {
-                    Form f = new Mantenimiento_de_Equipos();
-                    Mantenimiento_de_Equipos.modificar = true;
+                    Form f = new Mantenimiento_de_Participantes();
+                    Mantenimiento_de_Participantes.modificar = true;
                     f.ShowDialog();
                 }
                 else
                 {
-                    Form f = new Mantenimiento_Empleado();
-                    Mantenimiento_Empleado.modificar = true;
-                    f.ShowDialog();
+                    if (cbtipobusqueda.Text == "Equipos")
+                    {
+                        Form f = new Mantenimiento_de_Equipos();
+                        Mantenimiento_de_Equipos.modificar = true;
+                        f.ShowDialog();
+                    }
+                    else
+                    {
+                        Form f = new Mantenimiento_Empleado();
+                        Mantenimiento_Empleado.modificar = true;
+                        f.ShowDialog();
+                    }
                 }
             }
         }
@@ -186,5 +203,12 @@ namespace Gestion_de_Equipos
         {
             MostrarTodo();
         }
+
+        public void Seleccionar()
+        {
+            cbtipobusqueda.SelectedIndex = SeleccionandoIndex;
+            cbtipobusqueda.Enabled = false;
+        }
+
     }
 }

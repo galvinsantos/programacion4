@@ -44,6 +44,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnmantenimientos = new System.Windows.Forms.Button();
+            this.btnreservar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -163,7 +164,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(26, 153);
+            this.button2.Location = new System.Drawing.Point(26, 248);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(293, 88);
             this.button2.TabIndex = 2;
@@ -185,13 +186,25 @@
             // 
             this.btnmantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmantenimientos.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmantenimientos.Location = new System.Drawing.Point(26, 247);
+            this.btnmantenimientos.Location = new System.Drawing.Point(26, 342);
             this.btnmantenimientos.Name = "btnmantenimientos";
             this.btnmantenimientos.Size = new System.Drawing.Size(293, 88);
             this.btnmantenimientos.TabIndex = 2;
             this.btnmantenimientos.Text = "Mantenimientos";
             this.btnmantenimientos.UseVisualStyleBackColor = true;
             this.btnmantenimientos.Click += new System.EventHandler(this.btnmantenimientos_Click);
+            // 
+            // btnreservar
+            // 
+            this.btnreservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreservar.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreservar.Location = new System.Drawing.Point(26, 154);
+            this.btnreservar.Name = "btnreservar";
+            this.btnreservar.Size = new System.Drawing.Size(293, 88);
+            this.btnreservar.TabIndex = 2;
+            this.btnreservar.Text = "Reservar";
+            this.btnreservar.UseVisualStyleBackColor = true;
+            this.btnreservar.Click += new System.EventHandler(this.btnreservar_Click);
             // 
             // MenuPrincipal
             // 
@@ -200,6 +213,7 @@
             this.ClientSize = new System.Drawing.Size(905, 606);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnmantenimientos);
+            this.Controls.Add(this.btnreservar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -236,5 +250,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnmantenimientos;
+        private System.Windows.Forms.Button btnreservar;
     }
 }

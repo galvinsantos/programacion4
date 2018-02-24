@@ -12,10 +12,10 @@ namespace Gestion_de_Equipos
 {
     public partial class MenuPrincipal : Form
     {
+        operacion oper = new operacion();
         public static string empleadoid = "CERRADO";
         public static string codigomantenimiento = "";
-        operacion oper = new operacion();
-
+        public static string  idseleccionar = "0";
 
         public MenuPrincipal()
         {
@@ -117,7 +117,12 @@ namespace Gestion_de_Equipos
         {
             Form f = new Mantenimientos();
             f.ShowDialog();
+        }
 
+        private void btnreservar_Click(object sender, EventArgs e)
+        {
+            Form f = new reservar();
+            f.ShowDialog();
         }
     }
 }

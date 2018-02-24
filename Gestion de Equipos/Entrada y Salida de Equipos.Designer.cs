@@ -40,8 +40,6 @@
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.btnmostrartodo = new System.Windows.Forms.Button();
-            this.btnentrada = new System.Windows.Forms.Button();
-            this.btnsalida = new System.Windows.Forms.Button();
             this.cbtipobusqueda = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvequipos)).BeginInit();
             this.SuspendLayout();
@@ -159,37 +157,13 @@
             // 
             this.btnmostrartodo.BackColor = System.Drawing.Color.White;
             this.btnmostrartodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmostrartodo.Location = new System.Drawing.Point(274, 385);
+            this.btnmostrartodo.Location = new System.Drawing.Point(33, 378);
             this.btnmostrartodo.Name = "btnmostrartodo";
-            this.btnmostrartodo.Size = new System.Drawing.Size(214, 38);
+            this.btnmostrartodo.Size = new System.Drawing.Size(685, 45);
             this.btnmostrartodo.TabIndex = 67;
             this.btnmostrartodo.Text = "Mostrar Todos";
             this.btnmostrartodo.UseVisualStyleBackColor = false;
             this.btnmostrartodo.Click += new System.EventHandler(this.btnmostrartodo_Click);
-            // 
-            // btnentrada
-            // 
-            this.btnentrada.BackColor = System.Drawing.Color.Azure;
-            this.btnentrada.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnentrada.Location = new System.Drawing.Point(66, 385);
-            this.btnentrada.Name = "btnentrada";
-            this.btnentrada.Size = new System.Drawing.Size(155, 38);
-            this.btnentrada.TabIndex = 73;
-            this.btnentrada.Text = "Dar Entrada";
-            this.btnentrada.UseVisualStyleBackColor = false;
-            this.btnentrada.Click += new System.EventHandler(this.btnentrada_Click);
-            // 
-            // btnsalida
-            // 
-            this.btnsalida.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.btnsalida.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.btnsalida.Location = new System.Drawing.Point(537, 385);
-            this.btnsalida.Name = "btnsalida";
-            this.btnsalida.Size = new System.Drawing.Size(155, 38);
-            this.btnsalida.TabIndex = 73;
-            this.btnsalida.Text = "Dar Salida";
-            this.btnsalida.UseVisualStyleBackColor = false;
-            this.btnsalida.Click += new System.EventHandler(this.btnsalida_Click);
             // 
             // cbtipobusqueda
             // 
@@ -212,8 +186,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 435);
             this.Controls.Add(this.cbtipobusqueda);
-            this.Controls.Add(this.btnsalida);
-            this.Controls.Add(this.btnentrada);
             this.Controls.Add(this.tbbuscar);
             this.Controls.Add(this.btnmostrartodo);
             this.Controls.Add(this.btnbuscar);
@@ -238,8 +210,6 @@
         private System.Windows.Forms.DataGridView dgvequipos;
         private System.Windows.Forms.Label lbltitulo;
         private System.Windows.Forms.Button btnmostrartodo;
-        private System.Windows.Forms.Button btnentrada;
-        private System.Windows.Forms.Button btnsalida;
         private System.Windows.Forms.ComboBox cbtipobusqueda;
         private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;

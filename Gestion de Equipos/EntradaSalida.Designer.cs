@@ -31,6 +31,7 @@
             this.btnsalida = new System.Windows.Forms.Button();
             this.btnentrada = new System.Windows.Forms.Button();
             this.lbltitulo = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnsalida
@@ -67,15 +68,30 @@
             this.lbltitulo.TabIndex = 74;
             this.lbltitulo.Text = "Seleccione la Opción";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Azure;
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(116, 97);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(201, 38);
+            this.button1.TabIndex = 77;
+            this.button1.Text = "Reservar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // EntradaSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 109);
+            this.ClientSize = new System.Drawing.Size(447, 145);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnsalida);
             this.Controls.Add(this.btnentrada);
             this.Controls.Add(this.lbltitulo);
+            this.MaximumSize = new System.Drawing.Size(463, 184);
+            this.MinimumSize = new System.Drawing.Size(463, 184);
             this.Name = "EntradaSalida";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EntradaSalida";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -87,5 +103,6 @@
         private System.Windows.Forms.Button btnsalida;
         private System.Windows.Forms.Button btnentrada;
         private System.Windows.Forms.Label lbltitulo;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -12,11 +12,10 @@ namespace Gestion_de_Equipos
 {
     public class operacion
     {
-        public void AgregarEmpleado(string codigo, string nombre, string cedula, string telefono, string direccion)
+        public void AgregarEmpleado(string nombre, string cedula, string telefono, string direccion)
         {
             SqlConnection con = new SqlConnection("Data Source="+Environment.MachineName+"\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
-            string strsql;
-            strsql = "insert into clientes(nombre, cedula, telefono, direccion) values(@nombre, @cedula, @telefono, @direccion)";
+            string strsql = "insert into empleados(nombre, ceduña, telefono, direccion) values(@nombre, @cedula, @telefono, @direccion)";
             SqlCommand cmd = new SqlCommand(strsql, con);
 
             con.Open();
