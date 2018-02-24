@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(105, 77);
+            this.label1.Location = new System.Drawing.Point(59, 136);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 100);
+            this.label2.Location = new System.Drawing.Point(39, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 1;
@@ -55,23 +55,23 @@
             // 
             // txtusuario
             // 
-            this.txtusuario.Location = new System.Drawing.Point(212, 69);
+            this.txtusuario.Location = new System.Drawing.Point(130, 133);
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(100, 20);
+            this.txtusuario.Size = new System.Drawing.Size(119, 20);
             this.txtusuario.TabIndex = 2;
             // 
             // txtcontrasena
             // 
-            this.txtcontrasena.Location = new System.Drawing.Point(212, 100);
+            this.txtcontrasena.Location = new System.Drawing.Point(130, 164);
             this.txtcontrasena.Name = "txtcontrasena";
-            this.txtcontrasena.Size = new System.Drawing.Size(100, 20);
+            this.txtcontrasena.Size = new System.Drawing.Size(119, 20);
             this.txtcontrasena.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(212, 152);
+            this.button1.Location = new System.Drawing.Point(186, 199);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(63, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
@@ -81,7 +81,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 280);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(358, 314);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtcontrasena);
             this.Controls.Add(this.txtusuario);
