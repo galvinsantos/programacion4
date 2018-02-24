@@ -22,12 +22,13 @@ namespace Gestion_de_Equipos
         {
             Form f = new Consultar();
             Consultar.Seleccionando = true;
+            Consultar.SeleccionandoIndex = 2;
             f.ShowDialog();
             if(MenuPrincipal.idseleccionar != "0")
             {
                 //Cargar nombre e id
-                DataSet ds = oper.DataSetConsulta("SELECT nombre FROM participantes WHERE id = '" + MenuPrincipal.idseleccionar + "'");
-                txtidequipo.Text = ds.Tables[0].Rows[0][0].ToString();
+                DataSet ds = oper.DataSetConsulta("SELECT nombre FROM equipos WHERE id = '" + MenuPrincipal.idseleccionar + "'");
+                txtequipo.Text = ds.Tables[0].Rows[0][0].ToString();
                 txtidequipo.Text = MenuPrincipal.idseleccionar;
             }
             else
@@ -56,12 +57,31 @@ namespace Gestion_de_Equipos
 
                 DateTime targetdate = dtfechatarget.Value;
                 string fechatarget = oper.FormatearFecha(targetdate);
+                
+                //Insertar la Reserva en procesos
                 oper.QuerySqlLibre("INSERT INTO procesos (idequipo, estado, idparticipante, idempleado, fecha) " +
                     "VALUES('" + txtidequipo.Text + "', 'RESERVADO', '" + idparticipante + "', '" + MenuPrincipal.idempleado + "', '" + fechatarget + "');");
+
+                //Actualizar el estado del equipo seleccionado
+                oper.QuerySqlLibre("UPDATE equipos SET estado = 'RESERVADO' WHERE id = '" + txtidequipo + "';");
+                MessageBox.Show("El equipo fue reservado satisfactoriamente...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else {
                 MessageBox.Show("Debe rellenar todos los campos...","Reserva",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public void NuevoReserva()
+        {
+            txtparticipantematricula.Clear();
+            txtidequipo.Text = "0";
+            txtequipo.Text = "Seleccionar";
+
         }
     }
 }

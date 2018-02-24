@@ -75,6 +75,7 @@
             this.btncancelar.TabIndex = 80;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = false;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // txtparticipantematricula
             // 
@@ -120,7 +121,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(74, 150);
+            this.label3.Location = new System.Drawing.Point(67, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 26);
             this.label3.TabIndex = 78;
@@ -129,14 +130,15 @@
             // txtequipo
             // 
             this.txtequipo.BackColor = System.Drawing.Color.White;
+            this.txtequipo.Enabled = false;
             this.txtequipo.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.txtequipo.Location = new System.Drawing.Point(152, 150);
+            this.txtequipo.Location = new System.Drawing.Point(136, 150);
             this.txtequipo.MaxLength = 10;
             this.txtequipo.Name = "txtequipo";
             this.txtequipo.ReadOnly = true;
             this.txtequipo.Size = new System.Drawing.Size(166, 29);
             this.txtequipo.TabIndex = 81;
-            this.txtequipo.Text = "Ejemplo LX10";
+            this.txtequipo.Text = "Seleccionar";
             // 
             // button1
             // 
@@ -153,14 +155,16 @@
             // txtidequipo
             // 
             this.txtidequipo.BackColor = System.Drawing.Color.White;
+            this.txtidequipo.Enabled = false;
             this.txtidequipo.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.txtidequipo.Location = new System.Drawing.Point(326, 150);
+            this.txtidequipo.Location = new System.Drawing.Point(308, 150);
             this.txtidequipo.MaxLength = 10;
             this.txtidequipo.Name = "txtidequipo";
             this.txtidequipo.ReadOnly = true;
-            this.txtidequipo.Size = new System.Drawing.Size(29, 29);
+            this.txtidequipo.Size = new System.Drawing.Size(47, 29);
             this.txtidequipo.TabIndex = 81;
             this.txtidequipo.Text = "0";
+            this.txtidequipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Aula
             // 
@@ -202,7 +206,12 @@
             this.Controls.Add(this.btnreservar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbltitulo);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(550, 327);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(550, 327);
             this.Name = "reservar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservar Equipo";
             this.ResumeLayout(false);
             this.PerformLayout();
