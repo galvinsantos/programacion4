@@ -111,6 +111,7 @@ namespace Gestion_de_Equipos
             if (Seleccionando)
             {
                 MenuPrincipal.idseleccionar = dgvequipos.CurrentRow.Cells[0].Value.ToString();
+                Seleccionando = false;
                 this.Close();
             }
             else

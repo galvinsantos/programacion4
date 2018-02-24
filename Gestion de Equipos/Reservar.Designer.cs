@@ -214,6 +214,7 @@
             this.Name = "reservar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservar Equipo";
+            this.Load += new System.EventHandler(this.reservar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

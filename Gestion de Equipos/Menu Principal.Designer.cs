@@ -141,7 +141,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Gestion_de_Equipos.Properties.Resources.Proyector;
-            this.pictureBox1.Location = new System.Drawing.Point(382, 266);
+            this.pictureBox1.Location = new System.Drawing.Point(382, 315);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(511, 331);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -150,11 +150,12 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(26, 48);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(293, 99);
+            this.button1.Size = new System.Drawing.Size(293, 73);
             this.button1.TabIndex = 2;
             this.button1.Text = "Consultar";
             this.button1.UseVisualStyleBackColor = true;
@@ -162,11 +163,12 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(26, 248);
+            this.button2.Location = new System.Drawing.Point(26, 196);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(293, 88);
+            this.button2.Size = new System.Drawing.Size(293, 62);
             this.button2.TabIndex = 2;
             this.button2.Text = "Entrada y Salida";
             this.button2.UseVisualStyleBackColor = true;
@@ -184,11 +186,12 @@
             // 
             // btnmantenimientos
             // 
+            this.btnmantenimientos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmantenimientos.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmantenimientos.Location = new System.Drawing.Point(26, 342);
+            this.btnmantenimientos.Location = new System.Drawing.Point(26, 264);
             this.btnmantenimientos.Name = "btnmantenimientos";
-            this.btnmantenimientos.Size = new System.Drawing.Size(293, 88);
+            this.btnmantenimientos.Size = new System.Drawing.Size(293, 61);
             this.btnmantenimientos.TabIndex = 2;
             this.btnmantenimientos.Text = "Mantenimientos";
             this.btnmantenimientos.UseVisualStyleBackColor = true;
@@ -196,11 +199,12 @@
             // 
             // btnreservar
             // 
+            this.btnreservar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnreservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnreservar.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreservar.Location = new System.Drawing.Point(26, 154);
+            this.btnreservar.Location = new System.Drawing.Point(26, 127);
             this.btnreservar.Name = "btnreservar";
-            this.btnreservar.Size = new System.Drawing.Size(293, 88);
+            this.btnreservar.Size = new System.Drawing.Size(293, 63);
             this.btnreservar.TabIndex = 2;
             this.btnreservar.Text = "Reservar";
             this.btnreservar.UseVisualStyleBackColor = true;
@@ -218,6 +222,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MenuPrincipal";

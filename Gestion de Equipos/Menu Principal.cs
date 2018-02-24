@@ -103,7 +103,7 @@ namespace Gestion_de_Equipos
 
         private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            bool SalirDelSistema = oper.CajaDeMensaje("salir del Sistema","Salir");
+            bool SalirDelSistema = oper.CajaDeMensaje("Salir del Sistema","Salir");
             if (SalirDelSistema)
             {
                 this.Close();

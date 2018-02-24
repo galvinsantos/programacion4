@@ -24,7 +24,7 @@ namespace Gestion_de_Equipos
             Consultar.Seleccionando = true;
             Consultar.SeleccionandoIndex = 2;
             f.ShowDialog();
-            if(MenuPrincipal.idseleccionar != "0")
+            if (MenuPrincipal.idseleccionar != "0")
             {
                 //Cargar nombre e id
                 DataSet ds = oper.DataSetConsulta("SELECT nombre FROM equipos WHERE id = '" + MenuPrincipal.idseleccionar + "'");
@@ -40,10 +40,8 @@ namespace Gestion_de_Equipos
         private void btnreservar_Click(object sender, EventArgs e)
         {
             if (txtparticipantematricula.Text != "" && txtidequipo.Text != "0" && txtequipo.Text != "" && txtaula.Text != "")
-                if (dtfechatarget.Value > DateTime.Now)
+                if (dtfechatarget.Value > DateTime.Now) //Validar que la fecha sea Mayor a ayer...
                 {
-
-
                     {
                         string idparticipante = "";
                         DataSet ds = oper.DataSetConsulta("SELECT id FROM participantes WHERE matricula = '" + txtparticipantematricula.Text + "';");
@@ -61,18 +59,20 @@ namespace Gestion_de_Equipos
 
                         DateTime targetdate = dtfechatarget.Value;
                         string fechatarget = oper.FormatearFecha(targetdate);
+                        fechatarget += " " + dtfechatarget.Text;
 
                         //Insertar la Reserva en procesos
                         oper.QuerySqlLibre("INSERT INTO procesos (idequipo, estado, idparticipante, idempleado, fecha) " +
                             "VALUES('" + txtidequipo.Text + "', 'RESERVADO', '" + idparticipante + "', '" + MenuPrincipal.idempleado + "', '" + fechatarget + "');");
 
                         //Actualizar el estado del equipo seleccionado
-                        oper.QuerySqlLibre("UPDATE equipos SET estado = 'RESERVADO' WHERE id = '" + txtidequipo + "';");
+                        oper.QuerySqlLibre("UPDATE equipos SET estado = 'RESERVADO' WHERE id = '" + txtidequipo.Text + "';");
                         MessageBox.Show("El equipo fue reservado satisfactoriamente...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         NuevoReserva();
                     }
                 }
-                else {
+                else
+                {
                     MessageBox.Show("Elija una fecha válida...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dtfechatarget.Focus();
                 }
@@ -95,6 +95,12 @@ namespace Gestion_de_Equipos
             dtfechatarget.Value = DateTime.Now;
             dtfechatarget.Text = "08:00:00";
             txtaula.Clear();
+        }
+
+        private void reservar_Load(object sender, EventArgs e)
+        {
+            dtfechatarget.Value = DateTime.Now;
+            dtfechatarget.Text = "08:00:00";
         }
     }
 }
