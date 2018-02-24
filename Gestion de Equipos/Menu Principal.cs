@@ -15,8 +15,9 @@ namespace Gestion_de_Equipos
         operacion oper = new operacion();
         public static string usuarioempleado = "CERRADO";
         public static string idempleado = "1";
+        public static string TipoUsuario = "";
         public static string codigomantenimiento = "";
-        public static string  idseleccionar = "0";
+        public static string idseleccionar = "0";
 
         public MenuPrincipal()
         {
@@ -31,17 +32,28 @@ namespace Gestion_de_Equipos
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //Form f = new Login();
-            //f.ShowDialog();
+            //IniciarSesion();
+        }
 
-            //if (empleadoid == "CERRADO") //Validar que se halla iniciado sesion...
-            //{
-            //    this.Close();
-            //}
-            //else
-            //{
-            //    //Continuar
-            //}
+        public void IniciarSesion()
+        {
+
+
+            Form f = new Login();
+            usuarioempleado = "CERRADO";
+            TipoUsuario = "";
+            f.ShowDialog();
+
+            if (usuarioempleado == "CERRADO") //Validar que se halla iniciado sesion...
+            {
+                this.Close();
+            }
+            else
+            {
+                //Continuar
+            }
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -88,18 +100,7 @@ namespace Gestion_de_Equipos
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new Login();
-            usuarioempleado = "CERRADO";
-            f.ShowDialog();
-
-            if (usuarioempleado == "CERRADO") //Validar que se halla iniciado sesion...
-            {
-                this.Close();
-            }
-            else
-            {
-                //Continuar
-            }
+            IniciarSesion()
         }
 
         private void salirToolStripMenuItem1_Click(object sender, EventArgs e)

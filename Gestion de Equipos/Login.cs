@@ -55,17 +55,18 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
 
                 if (dt.Rows[0][0].ToString() == "1")
                 {
+                    DataSet ds = oper.DataSetConsulta("SELECT idempleado, tipousuario FROM login WHERE usuario = '" + txtusuario.Text + "';");
                     //Establecer el empleado
                     MenuPrincipal.usuarioempleado = txtusuario.Text;
-                    //Oculta la tabla de login y abre la interfas pricipal
+
+                    //Se cierra el Login y se habilita el menú principal
                     this.Close();
-                    //Form main = new Form2();
-                    //main.Show();
+
                 }
                 else
                 {
                     //mensaje de error si el usuario o contracena es incorrecto
-                    MessageBox.Show("Usuario o Contraseña Incorrectos");
+                    MessageBox.Show("Usuario o ontraseña Incorrectos");
                 }
 
             }

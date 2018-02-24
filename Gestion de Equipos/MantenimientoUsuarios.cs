@@ -80,17 +80,38 @@ namespace Gestion_de_Equipos
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-
+            CrearModificar();
         }
 
         private void dgvequipos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             idmodificar = dgvequipos.CurrentRow.Cells[0].Value.ToString();
+            Modificar();
+        }
+
+        public void Modificar()
+        {
+            modificar = true;
+            btnagregar.Text = "MODIFICAR";
+            DataSet ds = oper.DataSetConsulta("SELECT * FROM login WHERE usuario = '"+ idmodificar +"';");
+            txtempleado.Text = CargarEmpleado(MenuPrincipal.idseleccionar);
+            txtidempleado.Text = ds.Tables[0].Rows[0][2].ToString();
+            txtusuario.Text = ds.Tables[0].Rows[0][0].ToString();
+            txtcontraseña.Text = "*******";
+            cbtipousuario.Text = ds.Tables[0].Rows[0][3].ToString();
+        }
+
+        public string CargarEmpleado(string idempleado)
+        {
+            //Cargar nombre del empleado desde el id
+            DataSet ds = oper.DataSetConsulta("SELECT nombre FROM empleados WHERE id = '" + idempleado + "'");
+            return ds.Tables[0].Rows[0][0].ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             NuevoUsuario();
+            txtusuario.Focus();
         }
 
         public void NuevoUsuario()
@@ -98,8 +119,51 @@ namespace Gestion_de_Equipos
             modificar = false;
             txtcontraseña.Clear();
             txtempleado.Text = "Seleccione";
-
+            txtidempleado.Text = "0";
+            txtusuario.Clear();
+            cbtipousuario.SelectedIndex = 0;
+            btnagregar.Text = "CREAR";
         }
+
+        public bool ValidarCampos()
+        {
+            if(txtidempleado.Text != "0")
+            {
+                if (txtusuario.TextLength < 6 || txtcontraseña.TextLength < 6)
+                {
+                    MessageBox.Show("El usuario y la contraseña deben ser de por lo menos seis (6) carácteres...", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtusuario.Focus();
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe rellenar todos los campos...", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+        }
+
+        public void CrearModificar()
+        {
+            //Crear o modificar el usuario segun sea el caso
+            bool CamposCompletados = ValidarCampos();
+            if (CamposCompletados)
+            {
+                if (modificar)
+                {
+                    oper.QuerySqlLibre("UPDATE login SET usuario = '"+txtusuario.Text+ "', contrasena = '" + txtcontraseña.Text + "', idempleado = '" + txtidempleado.Text + "', tipousuario = '" + cbtipousuario.Text + "' WHERE usuario = '" + idmodificar + "';");
+                }
+                else {
+                    oper.QuerySqlLibre("INSERT INTO login VALUES ('" + txtusuario.Text + "','" + txtcontraseña.Text + "','" + txtidempleado.Text + "','" + cbtipousuario.Text + "',);");
+                }
+            }
+            else { }
+        }
+
 
     }
 }
