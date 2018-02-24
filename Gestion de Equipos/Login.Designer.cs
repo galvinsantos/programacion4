@@ -69,6 +69,7 @@
             this.txtcontrasena.Name = "txtcontrasena";
             this.txtcontrasena.Size = new System.Drawing.Size(119, 20);
             this.txtcontrasena.TabIndex = 3;
+            this.txtcontrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontrasena_KeyPress);
             // 
             // button1
             // 

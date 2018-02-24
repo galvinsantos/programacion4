@@ -81,6 +81,7 @@ namespace Gestion_de_Equipos
         private void btnagregar_Click(object sender, EventArgs e)
         {
             CrearModificar();
+            MostrarTodos();
         }
 
         private void dgvequipos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -99,6 +100,7 @@ namespace Gestion_de_Equipos
             txtusuario.Text = ds.Tables[0].Rows[0][0].ToString();
             txtcontraseña.Text = "*******";
             cbtipousuario.Text = ds.Tables[0].Rows[0][3].ToString();
+            txtusuario.Focus();
         }
 
         public string CargarEmpleado(string idempleado)
@@ -158,12 +160,25 @@ namespace Gestion_de_Equipos
                     oper.QuerySqlLibre("UPDATE login SET usuario = '"+txtusuario.Text+ "', contrasena = '" + txtcontraseña.Text + "', idempleado = '" + txtidempleado.Text + "', tipousuario = '" + cbtipousuario.Text + "' WHERE usuario = '" + idmodificar + "';");
                 }
                 else {
-                    oper.QuerySqlLibre("INSERT INTO login VALUES ('" + txtusuario.Text + "','" + txtcontraseña.Text + "','" + txtidempleado.Text + "','" + cbtipousuario.Text + "',);");
+                    oper.QuerySqlLibre("INSERT INTO login VALUES ('" + txtusuario.Text + "','" + txtcontraseña.Text + "','" + txtidempleado.Text + "','" + cbtipousuario.Text + "');");
                 }
             }
             else { }
         }
 
-
+        private void btnseleccionar_Click(object sender, EventArgs e)
+        {
+            Form f = new Consultar();
+            Consultar.SeleccionandoIndex = 1;
+            Consultar.Seleccionando = true;
+            MenuPrincipal.idseleccionar = "0";
+            f.ShowDialog();
+            if (MenuPrincipal.idseleccionar != "0")
+            {
+                txtempleado.Text = CargarEmpleado(MenuPrincipal.idseleccionar);
+                txtidempleado.Text = MenuPrincipal.idseleccionar;
+            }
+            else { }
+        }
     }
 }

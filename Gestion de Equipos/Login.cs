@@ -16,6 +16,7 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
     {
         operacion oper = new operacion();
         public bool preguntarsalir = true;
+        public bool IniciandoSesion = true;
 
         public Login()
         {
@@ -34,7 +35,15 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
         }
         SqlConnection cnx = new SqlConnection(@"Data Source = " + Environment.MachineName + "\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
         
+
+
+
         private void button1_Click(object sender, EventArgs e)
+        {
+            LogIn();
+        }
+
+        public void LogIn()
         {
             SqlConnection cnx = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS;Initial Catalog=gestion;Integrated Security=True");
             try
@@ -56,17 +65,19 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
                 if (dt.Rows[0][0].ToString() == "1")
                 {
                     DataSet ds = oper.DataSetConsulta("SELECT idempleado, tipousuario FROM login WHERE usuario = '" + txtusuario.Text + "';");
+
                     //Establecer el empleado
                     MenuPrincipal.usuarioempleado = txtusuario.Text;
+                    MenuPrincipal.idempleado = ds.Tables[0].Rows[0][0].ToString();
+                    MenuPrincipal.TipoUsuario = ds.Tables[0].Rows[0][1].ToString();
 
                     //Se cierra el Login y se habilita el menú principal
                     this.Close();
-
                 }
                 else
                 {
                     //mensaje de error si el usuario o contracena es incorrecto
-                    MessageBox.Show("Usuario o ontraseña Incorrectos");
+                    MessageBox.Show("Usuario o ontraseña Incorrectos","Inicio de Sesión", MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
 
             }
@@ -109,6 +120,21 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
             {
                 //Continue With the login
             }
+        }
+
+        private void txtcontrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (IniciandoSesion)
+            {
+                IniciandoSesion = false;
+                if (e.KeyChar == 13)
+                {
+                    LogIn();
+                }
+                else { }
+                IniciandoSesion = true;
+            }
+            else { }
         }
     }
 }

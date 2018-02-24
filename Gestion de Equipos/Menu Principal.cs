@@ -100,7 +100,7 @@ namespace Gestion_de_Equipos
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            IniciarSesion()
+            IniciarSesion();
         }
 
         private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
