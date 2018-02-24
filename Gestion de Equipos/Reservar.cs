@@ -40,34 +40,45 @@ namespace Gestion_de_Equipos
         private void btnreservar_Click(object sender, EventArgs e)
         {
             if (txtparticipantematricula.Text != "" && txtidequipo.Text != "0" && txtequipo.Text != "" && txtaula.Text != "")
+                if (dtfechatarget.Value > DateTime.Now)
+                {
+
+
+                    {
+                        string idparticipante = "";
+                        DataSet ds = oper.DataSetConsulta("SELECT id FROM participantes WHERE matricula = '" + txtparticipantematricula.Text + "';");
+                        try
+                        {
+                            idparticipante = ds.Tables[0].Rows[0][0].ToString();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Esta matrícula no existe, ingrese una matrícula correcta...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtparticipantematricula.Focus();
+                            txtparticipantematricula.SelectAll();
+                            return;
+                        }
+
+                        DateTime targetdate = dtfechatarget.Value;
+                        string fechatarget = oper.FormatearFecha(targetdate);
+
+                        //Insertar la Reserva en procesos
+                        oper.QuerySqlLibre("INSERT INTO procesos (idequipo, estado, idparticipante, idempleado, fecha) " +
+                            "VALUES('" + txtidequipo.Text + "', 'RESERVADO', '" + idparticipante + "', '" + MenuPrincipal.idempleado + "', '" + fechatarget + "');");
+
+                        //Actualizar el estado del equipo seleccionado
+                        oper.QuerySqlLibre("UPDATE equipos SET estado = 'RESERVADO' WHERE id = '" + txtidequipo + "';");
+                        MessageBox.Show("El equipo fue reservado satisfactoriamente...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        NuevoReserva();
+                    }
+                }
+                else {
+                    MessageBox.Show("Elija una fecha válida...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dtfechatarget.Focus();
+                }
+            else
             {
-                string idparticipante = "";
-                DataSet ds = oper.DataSetConsulta("SELECT id FROM participantes WHERE matricula = '" + txtparticipantematricula.Text + "';");
-                try
-                {
-                    idparticipante = ds.Tables[0].Rows[0][0].ToString();
-                }
-                catch
-                {
-                    MessageBox.Show("Esta matrícula no existe, ingrese una matrícula correcta...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtparticipantematricula.Focus();
-                    txtparticipantematricula.SelectAll();
-                    return;
-                }
-
-                DateTime targetdate = dtfechatarget.Value;
-                string fechatarget = oper.FormatearFecha(targetdate);
-                
-                //Insertar la Reserva en procesos
-                oper.QuerySqlLibre("INSERT INTO procesos (idequipo, estado, idparticipante, idempleado, fecha) " +
-                    "VALUES('" + txtidequipo.Text + "', 'RESERVADO', '" + idparticipante + "', '" + MenuPrincipal.idempleado + "', '" + fechatarget + "');");
-
-                //Actualizar el estado del equipo seleccionado
-                oper.QuerySqlLibre("UPDATE equipos SET estado = 'RESERVADO' WHERE id = '" + txtidequipo + "';");
-                MessageBox.Show("El equipo fue reservado satisfactoriamente...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else {
-                MessageBox.Show("Debe rellenar todos los campos...","Reserva",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Debe rellenar todos los campos...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -81,7 +92,9 @@ namespace Gestion_de_Equipos
             txtparticipantematricula.Clear();
             txtidequipo.Text = "0";
             txtequipo.Text = "Seleccionar";
-
+            dtfechatarget.Value = DateTime.Now;
+            dtfechatarget.Text = "08:00:00";
+            txtaula.Clear();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace Gestion_de_Equipos
 {
     public partial class Entrada_y_Salida_de_Equipos : Form
     {
+        operacion oper = new operacion();
         public Entrada_y_Salida_de_Equipos()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace Gestion_de_Equipos
         private void Entrada_y_Salida_de_Equipos_Load(object sender, EventArgs e)
         {
             cbtipobusqueda.SelectedIndex = 1;
+            MostrarTodos();
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
@@ -66,7 +68,18 @@ namespace Gestion_de_Equipos
 
         public void MostrarTodos()
         {
+            DataSet ds = oper.DataSetConsulta("SELECT * FROM procesos;");
 
+            dgvequipos.Rows.Clear();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                dgvequipos.Rows.Add();
+                for (int k = 0; k < 5; k++)
+                {
+                    dgvequipos.Rows[i].Cells[k].Value = ds.Tables[0].Rows[i][k].ToString();
+                }
+
+            }
         }
 
         private void dgvequipos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

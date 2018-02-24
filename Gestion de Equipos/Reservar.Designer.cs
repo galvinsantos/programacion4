@@ -111,11 +111,12 @@
             // dtfechatarget
             // 
             this.dtfechatarget.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.dtfechatarget.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtfechatarget.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtfechatarget.Location = new System.Drawing.Point(262, 105);
             this.dtfechatarget.Name = "dtfechatarget";
-            this.dtfechatarget.Size = new System.Drawing.Size(97, 29);
+            this.dtfechatarget.Size = new System.Drawing.Size(114, 29);
             this.dtfechatarget.TabIndex = 82;
+            this.dtfechatarget.Value = new System.DateTime(2018, 2, 23, 8, 0, 0, 0);
             // 
             // label3
             // 
