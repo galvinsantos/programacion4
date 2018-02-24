@@ -68,8 +68,7 @@ namespace Gestion_de_Equipos
 
         public void MostrarTodos()
         {
-            DataSet ds = oper.DataSetConsulta("SELECT * FROM procesos;");
-
+            DataSet ds = oper.DataSetConsulta("SELECT procesos.id, equipos.nombre, procesos.estado, participantes.nombre, empleados.nombre, procesos.fecha FROM procesos INNER JOIN equipos ON procesos.idequipo = equipos.id INNER JOIN participantes ON procesos.idparticipante = participantes.id INNER JOIN empleados ON procesos.idempleado = empleados.id;"); 
             dgvequipos.Rows.Clear();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {

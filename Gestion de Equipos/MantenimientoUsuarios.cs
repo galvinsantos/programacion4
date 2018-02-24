@@ -158,9 +158,11 @@ namespace Gestion_de_Equipos
                 if (modificar)
                 {
                     oper.QuerySqlLibre("UPDATE login SET usuario = '"+txtusuario.Text+ "', contrasena = '" + txtcontraseña.Text + "', idempleado = '" + txtidempleado.Text + "', tipousuario = '" + cbtipousuario.Text + "' WHERE usuario = '" + idmodificar + "';");
+                    NuevoUsuario();
                 }
                 else {
                     oper.QuerySqlLibre("INSERT INTO login VALUES ('" + txtusuario.Text + "','" + txtcontraseña.Text + "','" + txtidempleado.Text + "','" + cbtipousuario.Text + "');");
+                    NuevoUsuario();
                 }
             }
             else { }
