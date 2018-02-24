@@ -65,7 +65,7 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
                 else
                 {
                     //mensaje de error si el usuario o contracena es incorrecto
-                    MessageBox.Show("USUARIO O CONTRACEÑA INCORRECTO");
+                    MessageBox.Show("Usuario o Contraseña Incorrectos");
                 }
 
             }
