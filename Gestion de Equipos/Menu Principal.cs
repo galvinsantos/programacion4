@@ -10,13 +10,26 @@ using System.Windows.Forms;
 
 namespace Gestion_de_Equipos
 {
-    public partial class Form2 : Form
+    public partial class MenuPrincipal : Form
     {
-        public Form2()
+        public static string empleadoid = "CERRADO";
+        public static string codigomantenimiento = "";
+
+
+        public MenuPrincipal()
         {
             InitializeComponent();
             Form f = new Login();
             f.ShowDialog();
+
+            if(empleadoid == "CERRADO") //Validar que se halla iniciado sesion...
+            {
+                this.Close();
+            }
+            else
+            {
+                //Continuar
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,6 +88,7 @@ namespace Gestion_de_Equipos
         {
             Form f = new Login();
             f.ShowDialog();
+            empleadoid = "CERRADO";
         }
 
         private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
