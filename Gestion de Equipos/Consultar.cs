@@ -17,7 +17,7 @@ namespace Gestion_de_Equipos
         string nombretabla = "";
         public static bool Seleccionando = false;
         public static int SeleccionandoIndex = 0;
-        public static string criterio = "";
+        public string criterio = "";
 
         public Consultar()
         {
@@ -68,7 +68,7 @@ namespace Gestion_de_Equipos
 
         public void Buscar()
         {
-            DataSet ds = oper.DataSetConsulta("SELECT * FROM " + nombretabla + " WHERE nombre = '" + tbbuscar.Text + "';");
+            DataSet ds = oper.DataSetConsulta("SELECT * FROM " + nombretabla + " WHERE nombre LIKE '%" + tbbuscar.Text + "%';");
 
             dgvequipos.Rows.Clear();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -92,7 +92,7 @@ namespace Gestion_de_Equipos
 
             EstablecerCriterios();
 
-            DataSet ds = oper.DataSetConsulta("SELECT * FROM " + nombretabla + ";");
+            DataSet ds = oper.DataSetConsulta("SELECT * FROM " + nombretabla + " "+criterio+";");
 
             dgvequipos.Rows.Clear();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -181,7 +181,13 @@ namespace Gestion_de_Equipos
                 }
             }
 
+            if (Seleccionando && cbtipobusqueda.SelectedIndex == 2)
+            {
 
+                criterio = "WHERE estado = 'DISPONIBLE'";
+
+            }
+            else { }
 
         }
 
@@ -212,5 +218,9 @@ namespace Gestion_de_Equipos
             cbtipobusqueda.Enabled = false;
         }
 
+        private void tbbuscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            Buscar();
+        }
     }
 }

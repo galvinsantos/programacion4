@@ -52,7 +52,7 @@ namespace Gestion_de_Equipos
 
         private void equiposToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new Mantenimiento_de_Equipos();
+            Form f = new Mantenimientos();
             f.ShowDialog();
         }
 
@@ -70,7 +70,8 @@ namespace Gestion_de_Equipos
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Monstrando Formulario de Mantenimiento de Usuarios...");
+            Form f = new MantenimientoUsuarios();
+            f.ShowDialog();
         }
 
         private void entradaYSalidaDeEquiposToolStripMenuItem_Click(object sender, EventArgs e)

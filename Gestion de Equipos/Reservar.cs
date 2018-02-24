@@ -66,7 +66,7 @@ namespace Gestion_de_Equipos
                             "VALUES('" + txtidequipo.Text + "', 'RESERVADO', '" + idparticipante + "', '" + MenuPrincipal.idempleado + "', '" + fechatarget + "');");
 
                         //Actualizar el estado del equipo seleccionado
-                        oper.QuerySqlLibre("UPDATE equipos SET estado = 'RESERVADO' WHERE id = '" + txtidequipo.Text + "';");
+                        oper.QuerySqlLibre("UPDATE equipos SET estado = 'RESERVADO', ubicacion = '"  + txtaula.Text + "', participante = '" + txtparticipantematricula.Text + "' WHERE id = '" + txtidequipo.Text + "';");
                         MessageBox.Show("El equipo fue reservado satisfactoriamente...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         NuevaReserva();
                     }
@@ -95,6 +95,7 @@ namespace Gestion_de_Equipos
             dtfechatarget.Value = DateTime.Now;
             dtfechatarget.Text = "08:00:00";
             txtaula.Clear();
+            MenuPrincipal.idseleccionar = "0";
         }
 
         private void reservar_Load(object sender, EventArgs e)
@@ -122,13 +123,3 @@ namespace Gestion_de_Equipos
         }
     }
 }
-//CREATE TABLE procesos(
-//    [Id] INT NOT NULL,
-//    [idequipo] NVARCHAR(50) NULL, 
-//    [estado] NVARCHAR(50) NULL, 
-//    [idparticipante] NVARCHAR(50) NULL, 
-//    [idempleado] NVARCHAR(50) NULL, 
-//    [fecha]
-//DATE NULL,
-//    PRIMARY KEY CLUSTERED([Id] ASC)
-//);

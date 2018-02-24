@@ -85,10 +85,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 67);
+            this.tabControl1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(718, 357);
+            this.tabControl1.Size = new System.Drawing.Size(718, 377);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -107,10 +108,10 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.txtcodigoequipo);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(710, 331);
+            this.tabPage1.Size = new System.Drawing.Size(710, 346);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento de Equipos";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -122,7 +123,7 @@
             this.btpnew.Location = new System.Drawing.Point(262, 273);
             this.btpnew.Name = "btpnew";
             this.btpnew.Size = new System.Drawing.Size(102, 39);
-            this.btpnew.TabIndex = 80;
+            this.btpnew.TabIndex = 5;
             this.btpnew.Text = "Nuevo";
             this.btpnew.UseVisualStyleBackColor = true;
             // 
@@ -130,7 +131,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label8.ForeColor = System.Drawing.Color.LightSlateGray;
             this.label8.Location = new System.Drawing.Point(174, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(360, 37);
@@ -143,7 +144,7 @@
             this.btpdelete.Location = new System.Drawing.Point(342, 234);
             this.btpdelete.Name = "btpdelete";
             this.btpdelete.Size = new System.Drawing.Size(93, 33);
-            this.btpdelete.TabIndex = 79;
+            this.btpdelete.TabIndex = 6;
             this.btpdelete.Text = "Eliminar";
             this.btpdelete.UseVisualStyleBackColor = true;
             // 
@@ -153,7 +154,7 @@
             this.btnactualizarservicio.Location = new System.Drawing.Point(230, 234);
             this.btnactualizarservicio.Name = "btnactualizarservicio";
             this.btnactualizarservicio.Size = new System.Drawing.Size(106, 33);
-            this.btnactualizarservicio.TabIndex = 78;
+            this.btnactualizarservicio.TabIndex = 4;
             this.btnactualizarservicio.Text = "Guardar";
             this.btnactualizarservicio.UseVisualStyleBackColor = true;
             this.btnactualizarservicio.Click += new System.EventHandler(this.btnactualizarservicio_Click);
@@ -164,7 +165,7 @@
             this.txtparticipanteequipo.Location = new System.Drawing.Point(306, 195);
             this.txtparticipanteequipo.Name = "txtparticipanteequipo";
             this.txtparticipanteequipo.Size = new System.Drawing.Size(112, 23);
-            this.txtparticipanteequipo.TabIndex = 77;
+            this.txtparticipanteequipo.TabIndex = 3;
             // 
             // lblparticipante
             // 
@@ -182,7 +183,7 @@
             this.txtubicacionequipo.Location = new System.Drawing.Point(306, 166);
             this.txtubicacionequipo.Name = "txtubicacionequipo";
             this.txtubicacionequipo.Size = new System.Drawing.Size(194, 23);
-            this.txtubicacionequipo.TabIndex = 75;
+            this.txtubicacionequipo.TabIndex = 2;
             // 
             // lblmarca
             // 
@@ -200,7 +201,7 @@
             this.txtestadoequipo.Location = new System.Drawing.Point(305, 135);
             this.txtestadoequipo.Name = "txtestadoequipo";
             this.txtestadoequipo.Size = new System.Drawing.Size(112, 23);
-            this.txtestadoequipo.TabIndex = 76;
+            this.txtestadoequipo.TabIndex = 1;
             // 
             // lblestado
             // 
@@ -218,7 +219,7 @@
             this.txtnombreequipo.Location = new System.Drawing.Point(305, 104);
             this.txtnombreequipo.Name = "txtnombreequipo";
             this.txtnombreequipo.Size = new System.Drawing.Size(238, 23);
-            this.txtnombreequipo.TabIndex = 74;
+            this.txtnombreequipo.TabIndex = 0;
             // 
             // label2
             // 
@@ -265,10 +266,10 @@
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.textBox6);
             this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(710, 331);
+            this.tabPage2.Size = new System.Drawing.Size(710, 346);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento de Participantes";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -279,18 +280,18 @@
             this.button1.Location = new System.Drawing.Point(253, 260);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 39);
-            this.button1.TabIndex = 108;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Nuevo";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label3.Location = new System.Drawing.Point(178, 32);
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.label3.Location = new System.Drawing.Point(150, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(328, 28);
+            this.label3.Size = new System.Drawing.Size(420, 37);
             this.label3.TabIndex = 114;
             this.label3.Text = "Mantenimiento de Participantes";
             // 
@@ -300,7 +301,7 @@
             this.button2.Location = new System.Drawing.Point(333, 221);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 33);
-            this.button2.TabIndex = 107;
+            this.button2.TabIndex = 6;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -310,7 +311,7 @@
             this.button3.Location = new System.Drawing.Point(221, 221);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(106, 33);
-            this.button3.TabIndex = 106;
+            this.button3.TabIndex = 4;
             this.button3.Text = "Guardar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -321,7 +322,7 @@
             this.txtcarrera.Location = new System.Drawing.Point(295, 130);
             this.txtcarrera.Name = "txtcarrera";
             this.txtcarrera.Size = new System.Drawing.Size(194, 23);
-            this.txtcarrera.TabIndex = 103;
+            this.txtcarrera.TabIndex = 1;
             // 
             // label4
             // 
@@ -339,7 +340,7 @@
             this.txtmatricula.Location = new System.Drawing.Point(296, 190);
             this.txtmatricula.Name = "txtmatricula";
             this.txtmatricula.Size = new System.Drawing.Size(150, 23);
-            this.txtmatricula.TabIndex = 104;
+            this.txtmatricula.TabIndex = 3;
             // 
             // label5
             // 
@@ -357,7 +358,7 @@
             this.txttelefonopar.Location = new System.Drawing.Point(296, 161);
             this.txttelefonopar.Name = "txttelefonopar";
             this.txttelefonopar.Size = new System.Drawing.Size(150, 23);
-            this.txttelefonopar.TabIndex = 105;
+            this.txttelefonopar.TabIndex = 2;
             // 
             // label6
             // 
@@ -375,7 +376,7 @@
             this.txtnombrepart.Location = new System.Drawing.Point(295, 101);
             this.txtnombrepart.Name = "txtnombrepart";
             this.txtnombrepart.Size = new System.Drawing.Size(238, 23);
-            this.txtnombrepart.TabIndex = 102;
+            this.txtnombrepart.TabIndex = 0;
             // 
             // label7
             // 
@@ -422,9 +423,9 @@
             this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.txtcodigo);
             this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(710, 331);
+            this.tabPage3.Size = new System.Drawing.Size(710, 346);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Mantenimiento de Empleados";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -435,7 +436,7 @@
             this.button4.Location = new System.Drawing.Point(256, 272);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 39);
-            this.button4.TabIndex = 94;
+            this.button4.TabIndex = 5;
             this.button4.Text = "Nuevo";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -443,7 +444,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label10.ForeColor = System.Drawing.Color.LightSlateGray;
             this.label10.Location = new System.Drawing.Point(158, 19);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(395, 37);
@@ -456,7 +457,7 @@
             this.button5.Location = new System.Drawing.Point(336, 233);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(93, 33);
-            this.button5.TabIndex = 93;
+            this.button5.TabIndex = 6;
             this.button5.Text = "Eliminar";
             this.button5.UseVisualStyleBackColor = true;
             // 
@@ -466,7 +467,7 @@
             this.button6.Location = new System.Drawing.Point(224, 233);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(106, 33);
-            this.button6.TabIndex = 92;
+            this.button6.TabIndex = 4;
             this.button6.Text = "Guardar";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -477,7 +478,7 @@
             this.txtdireccion.Location = new System.Drawing.Point(301, 194);
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(112, 23);
-            this.txtdireccion.TabIndex = 91;
+            this.txtdireccion.TabIndex = 3;
             // 
             // label11
             // 
@@ -495,7 +496,7 @@
             this.txtcedula.Location = new System.Drawing.Point(299, 132);
             this.txtcedula.Name = "txtcedula";
             this.txtcedula.Size = new System.Drawing.Size(194, 23);
-            this.txtcedula.TabIndex = 89;
+            this.txtcedula.TabIndex = 1;
             // 
             // label12
             // 
@@ -513,7 +514,7 @@
             this.txttelefono.Location = new System.Drawing.Point(300, 163);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(112, 23);
-            this.txttelefono.TabIndex = 90;
+            this.txttelefono.TabIndex = 2;
             // 
             // label13
             // 
@@ -531,7 +532,7 @@
             this.txtnombre.Location = new System.Drawing.Point(299, 103);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(238, 23);
-            this.txtnombre.TabIndex = 88;
+            this.txtnombre.TabIndex = 0;
             // 
             // label14
             // 
@@ -566,7 +567,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 436);
+            this.ClientSize = new System.Drawing.Size(742, 401);
             this.Controls.Add(this.tabControl1);
             this.Name = "Mantenimientos";
             this.Text = "Mantenimientos";
