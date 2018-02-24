@@ -12,6 +12,7 @@ namespace Gestion_de_Equipos
 {
     public partial class reservar : Form
     {
+        operacion oper = new operacion();
         public reservar()
         {
             InitializeComponent();
@@ -25,11 +26,52 @@ namespace Gestion_de_Equipos
             if(MenuPrincipal.idseleccionar != "0")
             {
                 //Cargar nombre e id
+                DataSet ds = oper.DataSetConsulta("SELECT nombre FROM participantes WHERE id = '" + MenuPrincipal.idseleccionar + "'");
+                txtidequipo.Text = ds.Tables[0].Rows[0][0].ToString();
+                txtidequipo.Text = MenuPrincipal.idseleccionar;
             }
             else
             {
                 //No hacer nada
             }
         }
+
+        private void btnreservar_Click(object sender, EventArgs e)
+        {
+            if (txtparticipantematricula.Text != "" && txtidequipo.Text != "0" && txtequipo.Text != "" && txtaula.Text != "")
+            {
+                string idparticipante = "";
+                DataSet ds = oper.DataSetConsulta("SELECT id FROM participantes WHERE matricula = '" + txtparticipantematricula.Text + "';");
+                try
+                {
+                    idparticipante = ds.Tables[0].Rows[0][0].ToString();
+                }
+                catch
+                {
+                    MessageBox.Show("Esta matrícula no existe, ingrese una matrícula correcta...", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtparticipantematricula.Focus();
+                    txtparticipantematricula.SelectAll();
+                    return;
+                }
+
+                DateTime targetdate = dtfechatarget.Value;
+                string fechatarget = oper.FormatearFecha(targetdate);
+                oper.QuerySqlLibre("INSERT INTO procesos (idequipo, estado, idparticipante, idempleado, fecha) " +
+                    "VALUES('" + txtidequipo.Text + "', 'RESERVADO', '" + idparticipante + "', '" + MenuPrincipal.idempleado + "', '" + fechatarget + "');");
+            }
+            else {
+                MessageBox.Show("Debe rellenar todos los campos...","Reserva",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+        }
     }
 }
+//CREATE TABLE procesos(
+//    [Id] INT NOT NULL,
+//    [idequipo] NVARCHAR(50) NULL, 
+//    [estado] NVARCHAR(50) NULL, 
+//    [idparticipante] NVARCHAR(50) NULL, 
+//    [idempleado] NVARCHAR(50) NULL, 
+//    [fecha]
+//DATE NULL,
+//    PRIMARY KEY CLUSTERED([Id] ASC)
+//);

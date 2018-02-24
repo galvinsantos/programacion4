@@ -13,7 +13,8 @@ namespace Gestion_de_Equipos
     public partial class MenuPrincipal : Form
     {
         operacion oper = new operacion();
-        public static string empleadoid = "CERRADO";
+        public static string usuarioempleado = "CERRADO";
+        public static string idempleado = "1";
         public static string codigomantenimiento = "";
         public static string  idseleccionar = "0";
 
@@ -87,10 +88,10 @@ namespace Gestion_de_Equipos
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form f = new Login();
-            empleadoid = "CERRADO";
+            usuarioempleado = "CERRADO";
             f.ShowDialog();
 
-            if (empleadoid == "CERRADO") //Validar que se halla iniciado sesion...
+            if (usuarioempleado == "CERRADO") //Validar que se halla iniciado sesion...
             {
                 this.Close();
             }

@@ -34,23 +34,26 @@
             this.txtparticipantematricula = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtfechatarget = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtequipoid = new System.Windows.Forms.TextBox();
+            this.txtequipo = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtidequipo = new System.Windows.Forms.TextBox();
+            this.Aula = new System.Windows.Forms.Label();
+            this.txtaula = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnreservar
             // 
             this.btnreservar.BackColor = System.Drawing.Color.Azure;
             this.btnreservar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreservar.Location = new System.Drawing.Point(65, 219);
+            this.btnreservar.Location = new System.Drawing.Point(55, 235);
             this.btnreservar.Name = "btnreservar";
             this.btnreservar.Size = new System.Drawing.Size(201, 38);
             this.btnreservar.TabIndex = 80;
             this.btnreservar.Text = "Reservar";
             this.btnreservar.UseVisualStyleBackColor = false;
+            this.btnreservar.Click += new System.EventHandler(this.btnreservar_Click);
             // 
             // lbltitulo
             // 
@@ -66,7 +69,7 @@
             // 
             this.btncancelar.BackColor = System.Drawing.Color.Azure;
             this.btncancelar.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancelar.Location = new System.Drawing.Point(292, 219);
+            this.btncancelar.Location = new System.Drawing.Point(282, 235);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(201, 38);
             this.btncancelar.TabIndex = 80;
@@ -104,41 +107,42 @@
             this.label2.TabIndex = 78;
             this.label2.Text = "Reservado para";
             // 
-            // dateTimePicker1
+            // dtfechatarget
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(263, 110);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(97, 20);
-            this.dateTimePicker1.TabIndex = 82;
+            this.dtfechatarget.Font = new System.Drawing.Font("Palatino Linotype", 12F);
+            this.dtfechatarget.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtfechatarget.Location = new System.Drawing.Point(262, 105);
+            this.dtfechatarget.Name = "dtfechatarget";
+            this.dtfechatarget.Size = new System.Drawing.Size(97, 29);
+            this.dtfechatarget.TabIndex = 82;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(75, 156);
+            this.label3.Location = new System.Drawing.Point(74, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 26);
             this.label3.TabIndex = 78;
             this.label3.Text = "Equipo";
             // 
-            // txtequipoid
+            // txtequipo
             // 
-            this.txtequipoid.BackColor = System.Drawing.Color.White;
-            this.txtequipoid.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.txtequipoid.Location = new System.Drawing.Point(153, 156);
-            this.txtequipoid.MaxLength = 10;
-            this.txtequipoid.Name = "txtequipoid";
-            this.txtequipoid.ReadOnly = true;
-            this.txtequipoid.Size = new System.Drawing.Size(166, 29);
-            this.txtequipoid.TabIndex = 81;
-            this.txtequipoid.Text = "Ejemplo LX10";
+            this.txtequipo.BackColor = System.Drawing.Color.White;
+            this.txtequipo.Font = new System.Drawing.Font("Palatino Linotype", 12F);
+            this.txtequipo.Location = new System.Drawing.Point(152, 150);
+            this.txtequipo.MaxLength = 10;
+            this.txtequipo.Name = "txtequipo";
+            this.txtequipo.ReadOnly = true;
+            this.txtequipo.Size = new System.Drawing.Size(166, 29);
+            this.txtequipo.TabIndex = 81;
+            this.txtequipo.Text = "Ejemplo LX10";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Bisque;
             this.button1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(362, 151);
+            this.button1.Location = new System.Drawing.Point(361, 145);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 38);
             this.button1.TabIndex = 80;
@@ -150,7 +154,7 @@
             // 
             this.txtidequipo.BackColor = System.Drawing.Color.White;
             this.txtidequipo.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.txtidequipo.Location = new System.Drawing.Point(327, 156);
+            this.txtidequipo.Location = new System.Drawing.Point(326, 150);
             this.txtidequipo.MaxLength = 10;
             this.txtidequipo.Name = "txtidequipo";
             this.txtidequipo.ReadOnly = true;
@@ -158,16 +162,40 @@
             this.txtidequipo.TabIndex = 81;
             this.txtidequipo.Text = "0";
             // 
+            // Aula
+            // 
+            this.Aula.AutoSize = true;
+            this.Aula.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aula.Location = new System.Drawing.Point(184, 191);
+            this.Aula.Name = "Aula";
+            this.Aula.Size = new System.Drawing.Size(61, 26);
+            this.Aula.TabIndex = 78;
+            this.Aula.Text = "Lugar";
+            // 
+            // txtaula
+            // 
+            this.txtaula.BackColor = System.Drawing.Color.White;
+            this.txtaula.Font = new System.Drawing.Font("Palatino Linotype", 12F);
+            this.txtaula.Location = new System.Drawing.Point(262, 191);
+            this.txtaula.MaxLength = 20;
+            this.txtaula.Name = "txtaula";
+            this.txtaula.ReadOnly = true;
+            this.txtaula.Size = new System.Drawing.Size(166, 29);
+            this.txtaula.TabIndex = 81;
+            this.txtaula.Text = "1-D-503";
+            // 
             // reservar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 278);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(534, 288);
+            this.Controls.Add(this.dtfechatarget);
             this.Controls.Add(this.txtidequipo);
-            this.Controls.Add(this.txtequipoid);
+            this.Controls.Add(this.txtaula);
+            this.Controls.Add(this.txtequipo);
             this.Controls.Add(this.txtparticipantematricula);
             this.Controls.Add(this.btncancelar);
+            this.Controls.Add(this.Aula);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
@@ -189,10 +217,12 @@
         private System.Windows.Forms.TextBox txtparticipantematricula;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtfechatarget;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtequipoid;
+        private System.Windows.Forms.TextBox txtequipo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtidequipo;
+        private System.Windows.Forms.Label Aula;
+        private System.Windows.Forms.TextBox txtaula;
     }
 }

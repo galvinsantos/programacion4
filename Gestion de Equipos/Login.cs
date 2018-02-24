@@ -55,7 +55,7 @@ using System.Data.SqlClient;    //tener que eliminar para poder usar Npgsql o ot
                 if (dt.Rows[0][0].ToString() == "1")
                 {
                     //Establecer el empleado
-                    MenuPrincipal.empleadoid = txtusuario.Text;
+                    MenuPrincipal.usuarioempleado = txtusuario.Text;
                     //Oculta la tabla de login y abre la interfas pricipal
                     this.Close();
                     //Form main = new Form2();
