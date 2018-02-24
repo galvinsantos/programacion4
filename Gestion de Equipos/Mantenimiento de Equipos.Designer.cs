@@ -32,16 +32,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btpdelete = new System.Windows.Forms.Button();
             this.btnactualizarservicio = new System.Windows.Forms.Button();
-            this.tbdias = new System.Windows.Forms.TextBox();
+            this.tbparticipante = new System.Windows.Forms.TextBox();
             this.lblparticipante = new System.Windows.Forms.Label();
-            this.tbpprecio = new System.Windows.Forms.TextBox();
+            this.tbestado = new System.Windows.Forms.TextBox();
             this.lblestado = new System.Windows.Forms.Label();
             this.tbpnombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbpcodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblmarca = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbubicacion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btpnew
@@ -86,13 +86,13 @@
             this.btnactualizarservicio.UseVisualStyleBackColor = true;
             this.btnactualizarservicio.Click += new System.EventHandler(this.btnactualizarservicio_Click);
             // 
-            // tbdias
+            // tbparticipante
             // 
-            this.tbdias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbdias.Location = new System.Drawing.Point(156, 186);
-            this.tbdias.Name = "tbdias";
-            this.tbdias.Size = new System.Drawing.Size(112, 23);
-            this.tbdias.TabIndex = 64;
+            this.tbparticipante.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.tbparticipante.Location = new System.Drawing.Point(156, 186);
+            this.tbparticipante.Name = "tbparticipante";
+            this.tbparticipante.Size = new System.Drawing.Size(112, 23);
+            this.tbparticipante.TabIndex = 64;
             // 
             // lblparticipante
             // 
@@ -104,13 +104,13 @@
             this.lblparticipante.TabIndex = 71;
             this.lblparticipante.Text = "Participante";
             // 
-            // tbpprecio
+            // tbestado
             // 
-            this.tbpprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tbpprecio.Location = new System.Drawing.Point(155, 126);
-            this.tbpprecio.Name = "tbpprecio";
-            this.tbpprecio.Size = new System.Drawing.Size(112, 23);
-            this.tbpprecio.TabIndex = 63;
+            this.tbestado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.tbestado.Location = new System.Drawing.Point(155, 126);
+            this.tbestado.Name = "tbestado";
+            this.tbestado.Size = new System.Drawing.Size(112, 23);
+            this.tbestado.TabIndex = 63;
             // 
             // lblestado
             // 
@@ -169,13 +169,13 @@
             this.lblmarca.TabIndex = 70;
             this.lblmarca.Text = "Ubicación";
             // 
-            // textBox1
+            // tbubicacion
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox1.Location = new System.Drawing.Point(156, 157);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 23);
-            this.textBox1.TabIndex = 63;
+            this.tbubicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.tbubicacion.Location = new System.Drawing.Point(156, 157);
+            this.tbubicacion.Name = "tbubicacion";
+            this.tbubicacion.Size = new System.Drawing.Size(194, 23);
+            this.tbubicacion.TabIndex = 63;
             // 
             // Mantenimiento_de_Equipos
             // 
@@ -186,11 +186,11 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btpdelete);
             this.Controls.Add(this.btnactualizarservicio);
-            this.Controls.Add(this.tbdias);
+            this.Controls.Add(this.tbparticipante);
             this.Controls.Add(this.lblparticipante);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbubicacion);
             this.Controls.Add(this.lblmarca);
-            this.Controls.Add(this.tbpprecio);
+            this.Controls.Add(this.tbestado);
             this.Controls.Add(this.lblestado);
             this.Controls.Add(this.tbpnombre);
             this.Controls.Add(this.label2);
@@ -211,15 +211,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btpdelete;
         private System.Windows.Forms.Button btnactualizarservicio;
-        private System.Windows.Forms.TextBox tbdias;
+        private System.Windows.Forms.TextBox tbparticipante;
         private System.Windows.Forms.Label lblparticipante;
-        private System.Windows.Forms.TextBox tbpprecio;
+        private System.Windows.Forms.TextBox tbestado;
         private System.Windows.Forms.Label lblestado;
         private System.Windows.Forms.TextBox tbpnombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbpcodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblmarca;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbubicacion;
     }
 }

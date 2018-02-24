@@ -37,7 +37,7 @@ namespace Gestion_de_Equipos
 
         private void btnactualizarservicio_Click(object sender, EventArgs e)
         {
-            oper.
+            oper.QuerySqlLibre("INSERT INTO equipos (nombre, estado, ubicacion, participante) VALUES ('" + tbpnombre.Text + "','" + tbestado.Text + "','" + tbubicacion.Text + "','" + tbparticipante.Text + "');");
         }
     }
 }
