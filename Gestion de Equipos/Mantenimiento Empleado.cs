@@ -13,6 +13,7 @@ namespace Gestion_de_Equipos
 {
     public partial class Mantenimiento_Empleado : Form
     {
+        operacion oper = new operacion();
         public static bool modificar = false;
 
         public Mantenimiento_Empleado()
@@ -38,7 +39,7 @@ namespace Gestion_de_Equipos
 
         public void Cargar()
         {
-
+            oper.QuerySqlLibre("INSERT INTO empleados (nombre, ceduña, telefono, direccion) VALUES ('" + txtnombre.Text + "','" + txtcedula.Text + "','" + txttelefono.Text + "','" + txtdireccion.Text + "');");
         }
     }
 }
